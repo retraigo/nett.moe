@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import Counter from "../islands/Counter.tsx";
+import { Head } from "$fresh/runtime.ts";
 import Footer from "../components/Footer.tsx";
 import {
   CardChoice,
@@ -25,6 +26,14 @@ export default function Home() {
       dark:text-gray-300
     `}
     >
+      <Head>
+        <title>Tis I - NeTT!</title>
+        <meta name="title" content="NeTT" />
+        <meta name="description" content="Just my personal website." />
+        <meta name="theme-color" content="#fccef1" />
+        <meta name="og:host" content="https://nett.moe" />
+        <meta name="og:image" content="/schemingglowsmol.png" />
+      </Head>
       <div
         class={tw`inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-gray-200 dark:bg-chaos-primary`}
       >
@@ -83,7 +92,8 @@ export default function Home() {
           <div class={tw`flex flex-col space-y-4 max-w-2xl`}>
             <span class={tw`text-xl uppercase font-semibold`}>
               The timeline below does not include any kind of paid work I have
-              done. A timeline for commissions and other paid work might be coming soon.
+              done. A timeline for commissions and other paid work might be
+              coming soon.
             </span>
             <div class={tw`grid grid-cols-1 gap-4`}>
               {Timeline.map((x) => <CardTimeline {...x} />)}
