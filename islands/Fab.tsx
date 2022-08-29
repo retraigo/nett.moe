@@ -67,10 +67,10 @@ export default function Fab(
                   href={navItem.action}
                 >
                   <span
-                    class={tw`rounded-full relative group p-4 w-16 h-16 bg-chaos-tertiary`}
+                    class={tw`rounded-full flex items-center relative group p-4 w-16 h-16 bg-chaos-tertiary`}
                   >
                     <div
-                      class={tw`px-auto mx-auto stroke-white stroke-2`}
+                      class={tw`px-auto flex items-center stroke-white stroke-2`}
                     >
                       <svg
                         class={tw`block h-8 w-8 stroke-white stroke-2 mx-auto`}
