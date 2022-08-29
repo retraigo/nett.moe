@@ -10,8 +10,6 @@ export function MiscTag(props: { children: string }) {
       bg-chaos-foreground
       text-chaos-primary text-xs
       font-medium
-      inline-flex
-      items-center
       px-1.5
       py-0.5
       rounded
@@ -58,19 +56,19 @@ export default function Fab(
           }`}
         >
           <div
-            class={tw`space-y-4 w-full mx-auto`}
+            class={tw`space-y-4 mx-auto`}
           >
             {props.nav.map((navItem) => (
               <div key={navItem.key} class = {tw`mx-auto`}>
                 <a
-                  class={tw`relative p-2 group flex items-center justify-center cursor-pointer`}
+                  class={tw`relative p-2 group justify-center cursor-pointer`}
                   href={navItem.action}
                 >
                   <span
-                    class={tw`rounded-full flex items-center relative group p-4 w-16 h-16 bg-chaos-tertiary`}
+                    class={`${tw`rounded-full relative group p-4 w-16 h-16 bg-chaos-tertiary`} flex flex-row  items-center`}
                   >
                     <div
-                      class={tw`px-auto flex items-center stroke-white stroke-2`}
+                      class={tw`px-auto stroke-white stroke-2`}
                     >
                       <svg
                         class={tw`block h-8 w-8 stroke-white stroke-2 mx-auto`}
