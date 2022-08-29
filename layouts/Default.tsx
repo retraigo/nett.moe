@@ -28,11 +28,12 @@ const FabNav = [
     action: "/#projects",
     key: "projects",
     toolTip: "Projects",
-    routeIcon: "M 2 3 L 22 3 L 22 17 L 2 17 L 2 3 M 8 21 L 16 21 M 12 17 L 12 21",
+    routeIcon:
+      "M 2 3 L 22 3 L 22 17 L 2 17 L 2 3 M 8 21 L 16 21 M 12 17 L 12 21",
   },
 ];
 
-export default function DefaultLayout(props: {children: h.JSX.Element}) {
+export default function DefaultLayout(props: { children: h.JSX.Element }) {
   return (
     <div
       class={tw`
@@ -52,6 +53,7 @@ export default function DefaultLayout(props: {children: h.JSX.Element}) {
         <meta name="theme-color" content="#fccef1" />
         <meta name="og:host" content="https://nett.moe" />
         <meta name="og:image" content="/schemingglowsmol.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div
         class={tw`inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-gray-200 dark:bg-chaos-primary`}
