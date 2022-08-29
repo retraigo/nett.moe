@@ -1,61 +1,48 @@
 /** @jsx h */
 import { h } from "preact";
 import { tw } from "@twind";
-import Counter from "../islands/Counter.tsx";
-import { Head } from "$fresh/runtime.ts";
-import Footer from "../components/Footer.tsx";
 import {
   CardChoice,
   CardPerson,
   CardPlain,
+  CardProject,
   CardTimeline,
 } from "../components/Cards.tsx";
 import Timeline from "../data/Timeline.ts";
+import Projects from "../data/Projects.ts";
+import DefaultLayout from "../layouts/Default.tsx";
 
-import MovingDots from "../islands/MovingDots.tsx";
+const FabNav = [
+  {
+    name: "Top",
+    action: "/#top",
+    key: "top",
+    toolTip: "Go To Top",
+    routeIcon: "M18 15 L12 9 L6 15",
+  },
+  {
+    name: "Timeline",
+    action: "/#timeline",
+    key: "timeline",
+    toolTip: "Timeline",
+    routeIcon:
+      "M 12 6 L 12 12 L 16 14 M 12 12 m -10 0 a 10 10 0 1 1 20 0 a 10 10 0 1 1 -20 0",
+  },
+  {
+    name: "Projects",
+    action: "/#projects",
+    key: "projects",
+    toolTip: "Projects",
+    routeIcon:
+      "M 2 3 L 22 3 L 22 17 L 2 17 L 2 3 M 8 21 L 16 21 M 12 17 L 12 21",
+  },
+];
+
 export default function Home() {
   return (
-    <div
-      class={tw`
-      flex flex-col
-      min-h-screen
-      font-montserrat
-      text-lg
-      tracking-wide
-      text-gray-600
-      dark:text-gray-300
-    `}
-    >
-      <Head>
-        <title>Tis I - NeTT!</title>
-        <meta name="title" content="NeTT" />
-        <meta name="description" content="Just my personal website." />
-        <meta name="theme-color" content="#fccef1" />
-        <meta name="og:host" content="https://nett.moe" />
-        <meta name="og:image" content="/schemingglowsmol.png" />
-      </Head>
-      <div
-        class={tw`inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-gray-200 dark:bg-chaos-primary`}
-      >
-        <MovingDots />
-      </div>
-      <div
-        class={tw`
-        inset-0
-        w-full
-        fixed
-        h-full
-        -z-10
-        block
-        pointer-events-none
-        dark:bg-chaos-primary
-        dark:opacity-50
-        bg-gray-300
-        opacity-50
-      `}
-      />
+    <DefaultLayout>
       <main class={tw`flex-1 w-full max-w-7xl p-4 mx-auto md:px-8 py-4 mt-5`}>
-        <div class={tw`flex flex-col items-center space-y-72`}>
+        <div id="top" class={tw`flex flex-col items-center space-y-72`}>
           <div class={tw`flex flex-col items-center mt-36`}>
             <CardPerson
               name="Pranev (NeTT)"
@@ -89,7 +76,7 @@ export default function Home() {
             />
           </div>
 
-          <div class={tw`flex flex-col space-y-4 max-w-2xl`}>
+          <div id="timeline" class={tw`flex flex-col space-y-4 max-w-2xl`}>
             <span class={tw`text-xl uppercase font-semibold`}>
               The timeline below does not include any kind of paid work I have
               done. A timeline for commissions and other paid work might be
@@ -97,6 +84,15 @@ export default function Home() {
             </span>
             <div class={tw`grid grid-cols-1 gap-4`}>
               {Timeline.map((x) => <CardTimeline {...x} />)}
+            </div>
+          </div>
+          <div id="projects" class={tw`flex flex-col space-y-4 max-w-2xl`}>
+            <span class={tw`text-xl uppercase font-semibold`}>
+              The below is a list of "Project" of mine. By my definition, any
+              line of code I wrote for public use is considered a project.
+            </span>
+            <div class={tw`grid grid-cols-1 gap-4`}>
+              {Projects.map((x) => <CardProject {...x} />)}
             </div>
           </div>
           <div class={tw`flex flex-col items-start space-y-4 text-center`}>
@@ -138,7 +134,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <Footer />
-    </div>
+    </DefaultLayout>
   );
 }

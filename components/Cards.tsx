@@ -131,7 +131,78 @@ export function CardTimeline(props: CardTimelineProps) {
           <div
             class={tw`flex flex-col items-center lg:items-start text-left space-y-4`}
           >
-            <div class={tw`text-base font-semibold uppercase`}>{props.time}</div>
+            <div class={tw`text-base font-semibold uppercase`}>
+              {props.time}
+            </div>
+            <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
+            <div class={tw`text-sm dark:text-gray-400 text-gray-900`}>
+              {props.description}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface SVGPath {
+  fill: string;
+  path: string;
+}
+
+interface ProjectLink {
+  title: string;
+  url: string;
+  viewbox: string;
+  icon: SVGPath[];
+}
+
+interface CardProjectProps {
+  title: string;
+  description: string;
+  image: string;
+  links: ProjectLink[];
+}
+
+export function CardProject(props: CardProjectProps) {
+  return (
+    <div class={tw`p-4 w-full`}>
+      <div class={tw`max-w-2xl rounded-xl w-full p-4`}>
+        <div
+          class={tw`flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8`}
+        >
+          <div class={tw`flex-shrink-0 flex justify-center`}>
+            <img
+              src={props.image}
+              class={tw`object-cover rounded-full w-48 h-48`}
+            />
+          </div>
+          <div
+            class={tw`flex flex-col items-center lg:items-start text-left space-y-4`}
+          >
+            <div
+              class={tw`text-base font-semibold uppercase flex flex-row items-center space-x-2`}
+            >
+              {props.links.map((link) => {
+                return (
+                  <a href={link.url} class = {tw`block transition duration-500 ease-in-out transform hover:-translate-y-0.5`}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox={link.viewbox}
+                      fill="none"
+                      stroke="#fccef1"
+                      strokeWidth="2"
+                    >
+                      {link.icon.map((icon) => (
+                        <path d={icon.path} fill={icon.fill} />
+                      ))}
+                    </svg>
+                  </a>
+                );
+              })}
+            </div>
             <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
             <div class={tw`text-sm dark:text-gray-400 text-gray-900`}>
               {props.description}

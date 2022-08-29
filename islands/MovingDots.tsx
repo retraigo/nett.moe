@@ -11,7 +11,6 @@ const colors = ["#ffe6f9",
 ];
 
 export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
-  console.log("Called at", Date.now());
   tw`bg-maid-100 bg-maid-200 bg-maid-300 bg-maid-400 bg-maid-500`
   const arr = new Array(5 + Math.floor(Math.random() * 10)).fill(null);
   const _items: [number, number][] = [];
@@ -40,7 +39,7 @@ export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
 
   setTimeout(() => {
     moveItems();
-  }, 12000);
+  }, 5000);
 
   return (
     <svg width="100%" height="100vh" class="absolute -z-40">
