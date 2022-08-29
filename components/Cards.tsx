@@ -23,7 +23,7 @@ export function CardPerson(props: CardPersonProps) {
           <div class={tw`flex flex-col items-center text-center space-y-4`}>
             <div class={tw`text-3xl font-semibold`}>{props.name}</div>
             <div class={tw`text-2xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-lg dark:text-gray-400 text-gray-900`}>
+            <div class={tw`text-lg text-gray-400`}>
               {props.description}
             </div>
           </div>
@@ -47,7 +47,7 @@ export function CardPlain(props: CardPlainProps) {
           {props.description.map((desc, i) => (
             <div
               key={`desc${i}`}
-              class={tw`text-base dark:text-zinc-100 text-zinc-900`}
+              class={tw`text-base text-zinc-100`}
             >
               {desc}
             </div>
@@ -135,7 +135,7 @@ export function CardTimeline(props: CardTimelineProps) {
               {props.time}
             </div>
             <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-sm dark:text-gray-400 text-gray-900`}>
+            <div class={tw`text-sm text-gray-400`}>
               {props.description}
             </div>
           </div>
@@ -204,7 +204,7 @@ export function CardProject(props: CardProjectProps) {
               })}
             </div>
             <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-sm dark:text-gray-400 text-gray-900`}>
+            <div class={tw`text-sm text-gray-400`}>
               {props.description}
             </div>
           </div>
