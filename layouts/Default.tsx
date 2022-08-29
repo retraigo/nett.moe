@@ -42,8 +42,7 @@ export default function DefaultLayout(props: { children: h.JSX.Element }) {
       font-montserrat
       text-lg
       tracking-wide
-      text-gray-600
-      dark:text-gray-300
+      text-gray-300
     `}
     >
       <Head>
@@ -56,7 +55,7 @@ export default function DefaultLayout(props: { children: h.JSX.Element }) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div
-        class={tw`inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-gray-200 dark:bg-chaos-primary`}
+        class={tw`inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary`}
       >
         <MovingDots />
       </div>
@@ -69,9 +68,7 @@ export default function DefaultLayout(props: { children: h.JSX.Element }) {
         -z-10
         block
         pointer-events-none
-        dark:bg-chaos-primary
-        dark:opacity-50
-        bg-gray-300
+        bg-chaos-primary
         opacity-50
       `}
       />
