@@ -92,7 +92,7 @@ export default function Home() {
               line of code I wrote for public use is considered a project.
             </span>
             <div class={tw`grid grid-cols-1 gap-4`}>
-              {Projects.map((x) => <CardProject {...x} />)}
+              {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((x) => <CardProject {...x} />)}
             </div>
           </div>
           <div class={tw`flex flex-col items-start space-y-4 text-center`}>
