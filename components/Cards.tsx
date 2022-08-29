@@ -135,7 +135,7 @@ export function CardTimeline(props: CardTimelineProps) {
               {props.time}
             </div>
             <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-sm text-gray-400`}>
+            <div class={tw`text-sm text-gray-400 text-justify`}>
               {props.description}
             </div>
           </div>
@@ -204,7 +204,7 @@ export function CardProject(props: CardProjectProps) {
               })}
             </div>
             <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-sm text-gray-400`}>
+            <div class={tw`text-sm text-gray-400 text-justify`}>
               {props.description}
             </div>
           </div>
