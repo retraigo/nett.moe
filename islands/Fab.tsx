@@ -64,6 +64,7 @@ export default function Fab(
                   class={tw`relative p-2 group justify-center cursor-pointer`}
                   href={navItem.action}
                 >
+                  <span class = {tw`sr-only`}>{navItem.toolTip}</span>
                   <span
                     class={`${tw`rounded-full relative group p-4 w-16 h-16 bg-chaos-tertiary`} flex flex-row  items-center`}
                   >

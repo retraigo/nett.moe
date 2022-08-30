@@ -189,6 +189,7 @@ export function CardProject(props: CardProjectProps) {
               {props.links.map((link) => {
                 return (
                   <a href={link.url} class = {tw`block transition duration-500 ease-in-out transform hover:-translate-y-0.5`} target="_blank">
+                    <span class = {tw`sr-only`}>Open {props.title}</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
