@@ -18,6 +18,7 @@ export function CardPerson(props: CardPersonProps) {
             <img
               src={props.image}
               class={tw`object-cover rounded-full w-48 h-48`}
+              alt={props.title}
             />
           </div>
           <div class={tw`flex flex-col items-center text-center space-y-4`}>
@@ -91,7 +92,7 @@ export function CardChoice(props: CardChoiceProps) {
             <img
               src={props.image}
               class={tw`w-full md:h-48 md:w-48 object-cover rounded-full`}
-              alt="Abyss"
+              alt={props.title}
             />
           </div>
           <span class={tw`flex-grow p-2 px-8`}>
@@ -126,6 +127,7 @@ export function CardTimeline(props: CardTimelineProps) {
             <img
               src={props.image}
               class={tw`object-cover rounded-full w-48 h-48`}
+              alt={props.title}
             />
           </div>
           <div
@@ -175,6 +177,7 @@ export function CardProject(props: CardProjectProps) {
             <img
               src={props.image}
               class={tw`object-cover rounded-full w-48 h-48`}
+              alt={props.title}
             />
           </div>
           <div

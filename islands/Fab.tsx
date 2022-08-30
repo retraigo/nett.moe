@@ -108,6 +108,7 @@ export default function Fab(
             }`}
             onClick={toggleBoth}
           >
+            <span class = {tw`sr-only`}>Open Action Button</span>
             <svg
               class={tw`block h-8 w-8 stroke-white stroke-2 ${
                 toggleNav ? "rotate-45" : "rotate-0"
