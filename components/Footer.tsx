@@ -35,7 +35,7 @@ export default function Footer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
                 href="https://github.com/retraigo"
                 target="_blank"
                 class={tw`font-semibold flex flex-row items-center`}
-              >
+              ><span class = {tw`sr-only`}>NeTT's GitHub</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -52,7 +52,7 @@ export default function Footer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
                 href="https://twitter.com/retraigo"
                 target="_blank"
                 class={tw`font-semibold flex flex-row items-center`}
-              >
+              ><span class = {tw`sr-only`}>NeTT's Twitter</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

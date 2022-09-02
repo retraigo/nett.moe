@@ -124,7 +124,7 @@ export default function Fab(
                 class={tw`transition-all duration-500 transform ease-in-out`}
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d={`M 0 12 h 24 M 12 0 v 24 m 0`}
+                d={`M 0 12 h 24 M 12 0 v 24`}
               />
             </svg>
           </button>
