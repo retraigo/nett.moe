@@ -52,7 +52,7 @@ export default function DefaultLayout(props: { children: h.JSX.Element }) {
         <meta name="theme-color" content="#fccef1" />
         <meta name="og:host" content="https://nett.moe" />
         <meta name="og:image" content="/schemingglowsmol.png" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';" />
+        <meta http-equiv="Content-Security-Policy" content="base-uri 'none';" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div

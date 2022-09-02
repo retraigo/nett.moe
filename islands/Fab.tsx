@@ -69,10 +69,10 @@ export default function Fab(
                     class={`${tw`rounded-full relative group p-4 w-16 h-16 bg-chaos-tertiary`} flex flex-row  items-center`}
                   >
                     <div
-                      class={tw`px-auto stroke-white stroke-2`}
+                      class={`stroke-white stroke-2`}
                     >
                       <svg
-                        class={tw`block h-8 w-8 stroke-white stroke-2 mx-auto`}
+                        class={tw`block h-8 w-8 mx-auto`}
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         stroke="#fccef1"
@@ -111,7 +111,7 @@ export default function Fab(
           >
             <span class = {tw`sr-only`}>Open Action Button</span>
             <svg
-              class={tw`block h-8 w-8 stroke-white stroke-2 ${
+              class={tw`block h-8 w-8 ${
                 toggleNav ? "rotate-45" : "rotate-0"
               }`}
               xmlns="http://www.w3.org/2000/svg"
