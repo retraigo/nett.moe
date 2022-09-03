@@ -12,6 +12,13 @@ import Timeline from "../data/Timeline.ts";
 import Projects from "../data/Projects.ts";
 import DefaultLayout from "../layouts/Default.tsx";
 
+/*
+@TIMELINE
+<div class={tw`grid grid-cols-1 gap-4`}>
+{Timeline.map((x) => <CardTimeline {...x} />)}
+</div>
+*/
+
 const FabNav = [
   {
     name: "Top",
@@ -75,24 +82,29 @@ export default function Home() {
               link="https://www.youtube.com/channel/UCBwjrG9IYWH97PDDhl72NMQ/"
             />
           </div>
-
+          {
+            /*
           <div id="timeline" class={tw`flex flex-col space-y-4 max-w-2xl`}>
             <span class={tw`text-xl uppercase font-semibold`}>
               The timeline below does not include any kind of paid work I have
               done. A timeline for commissions and other paid work might be
               coming soon.
             </span>
-            <div class={tw`grid grid-cols-1 gap-4`}>
-              {Timeline.map((x) => <CardTimeline {...x} />)}
-            </div>
+
+// TEMPORARILY REMOVED @TIMELINE
+
           </div>
+            */
+          }{" "}
           <div id="projects" class={tw`flex flex-col space-y-4 max-w-2xl`}>
             <span class={tw`text-xl uppercase font-semibold`}>
               The below is a list of "Project" of mine. By my definition, any
               line of code I wrote for public use is considered a project.
             </span>
             <div class={tw`grid grid-cols-1 gap-4`}>
-              {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((x) => <CardProject {...x} />)}
+              {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((
+                x,
+              ) => <CardProject {...x} />)}
             </div>
           </div>
           <div class={tw`flex flex-col items-start space-y-4 text-center`}>
