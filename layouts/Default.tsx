@@ -1,9 +1,8 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
+
+
 import Footer from "../components/Footer.tsx";
 import { Head } from "$fresh/runtime.ts";
-
+import { JSX } from "preact"
 import MovingDots from "../islands/MovingDots.tsx";
 import Fab from "../islands/Fab.tsx";
 
@@ -33,17 +32,17 @@ const FabNav = [
   },
 ];
 
-export default function DefaultLayout(props: { children: h.JSX.Element }) {
+export default function DefaultLayout(props: { children: JSX.Element }) {
   return (
     <div
-      class={tw`
+      class="
       flex flex-col
       min-h-screen
       font-montserrat
       text-lg
       tracking-wide
       text-gray-300
-    `}
+    "
     >
       <Head>
         <title>Tis I - NeTT!</title>
@@ -56,12 +55,12 @@ export default function DefaultLayout(props: { children: h.JSX.Element }) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <div
-        class={tw`inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary`}
+        class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary"
       >
         <MovingDots />
       </div>
       <div
-        class={tw`
+        class="
         inset-0
         w-full
         fixed
@@ -71,7 +70,7 @@ export default function DefaultLayout(props: { children: h.JSX.Element }) {
         pointer-events-none
         bg-chaos-primary
         opacity-50
-      `}
+      "
       />
       {props.children}
       <Fab nav={FabNav} />

@@ -1,6 +1,5 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
+
+
 import {
   CardChoice,
   CardPerson,
@@ -14,7 +13,7 @@ import DefaultLayout from "../layouts/Default.tsx";
 
 /*
 @TIMELINE
-<div class={tw`grid grid-cols-1 gap-4`}>
+<div class="grid grid-cols-1 gap-4">
 {Timeline.map((x) => <CardTimeline {...x} />)}
 </div>
 */
@@ -48,9 +47,9 @@ const FabNav = [
 export default function Home() {
   return (
     <DefaultLayout>
-      <main class={tw`flex-1 w-full max-w-7xl p-4 mx-auto md:px-8 py-4 mt-5`}>
-        <div id="top" class={tw`flex flex-col items-center space-y-72`}>
-          <div class={tw`flex flex-col items-center mt-36`}>
+      <main class="flex-1 w-full max-w-7xl p-4 mx-auto md:px-8 py-4 mt-5">
+        <div id="top" class="flex flex-col items-center space-y-72">
+          <div class="flex flex-col items-center mt-36">
             <CardPerson
               name="Pranev (NeTT)"
               title="He who paints thy world in eternal nothingness"
@@ -58,7 +57,7 @@ export default function Home() {
               image="/nett.webp"
             />
           </div>
-          <div class={tw`flex flex-col items-center`}>
+          <div class="flex flex-col items-center">
             <CardPlain
               title="About Me"
               description={[
@@ -68,7 +67,7 @@ export default function Home() {
               ]}
             />
           </div>
-          <div class={tw`grid grid-cols-1 lg:grid-cols-2 gap-4`}>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <CardChoice
               title="Kuro's Chaos Abyss"
               description="My Discord server."
@@ -84,8 +83,8 @@ export default function Home() {
           </div>
           {
             /*
-          <div id="timeline" class={tw`flex flex-col space-y-4 max-w-2xl`}>
-            <span class={tw`text-xl uppercase font-semibold`}>
+          <div id="timeline" class="flex flex-col space-y-4 max-w-2xl">
+            <span class="text-xl uppercase font-semibold">
               The timeline below does not include any kind of paid work I have
               done. A timeline for commissions and other paid work might be
               coming soon.
@@ -96,51 +95,51 @@ export default function Home() {
           </div>
             */
           }{" "}
-          <div id="projects" class={tw`flex flex-col space-y-4 max-w-2xl`}>
-            <span class={tw`text-xl uppercase font-semibold`}>
+          <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
+            <span class="text-xl uppercase font-semibold">
               The below is a list of "Project" of mine. By my definition, any
               line of code I wrote for public use is considered a project.
             </span>
-            <div class={tw`grid grid-cols-1 gap-4`}>
+            <div class="grid grid-cols-1 gap-4">
               {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((
                 x,
               ) => <CardProject {...x} />)}
             </div>
           </div>
-          <div class={tw`flex flex-col items-start space-y-4 text-center`}>
-            <div class={tw`p-2 w-full`}>
+          <div class="flex flex-col items-start space-y-4 text-center">
+            <div class="p-2 w-full">
               Written by{"  "}
               <a
                 href="https://github.com/retraigo"
-                class={tw`text-chaos-foreground`}
+                class="text-chaos-foreground"
               >
                 Pranev
               </a>
             </div>
             <div
-              class={tw`p-2 w-full flex space-x-2 items-center justify-center`}
+              class="p-2 w-full flex space-x-2 items-center justify-center"
             >
               <span>Made with</span>
               <a
                 href="https://fresh.deno.dev"
-                class={tw`text-chaos-foreground flex gap-2 items-center`}
+                class="text-chaos-foreground flex gap-2 items-center"
               >
                 <span>Fresh</span>
-                <img src="/logo.svg" class={tw`w-6`} alt="Fresh Logo" />
+                <img src="/logo.svg" class="w-6" alt="Fresh Logo" />
               </a>
             </div>
-            <div class={tw`p-2 w-full`}>
+            <div class="p-2 w-full">
               Font used{"  "}
               <a
                 href="https://fonts.google.com/specimen/Montserrat"
-                class={tw`text-chaos-foreground`}
+                class="text-chaos-foreground"
               >
                 Montserrat
               </a>
             </div>
-            <div class={tw`p-2 w-full`}>
+            <div class="p-2 w-full">
               Credits to the color{"  "}
-              <span class={tw`text-chaos-foreground`}>#fccef1</span>{" "}
+              <span class="text-chaos-foreground">#fccef1</span>{" "}
               for existing.
             </div>
           </div>

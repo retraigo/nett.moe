@@ -1,7 +1,3 @@
-/**@jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
-
 interface CardPersonProps {
   image: string;
   name: string;
@@ -11,20 +7,20 @@ interface CardPersonProps {
 
 export function CardPerson(props: CardPersonProps) {
   return (
-    <div class={tw`p-4`}>
-      <div class={tw`max-w-2xl rounded-xl w-full p-4`}>
-        <div class={tw`flex flex-col items-stretch space-y-8`}>
-          <div class={tw`shrink-0 flex justify-center`}>
+    <div class="p-4">
+      <div class="max-w-2xl rounded-xl w-full p-4">
+        <div class="flex flex-col items-stretch space-y-8">
+          <div class="shrink-0 flex justify-center">
             <img
               src={props.image}
-              class={tw`object-cover rounded-full w-48 h-48`}
+              class="object-cover rounded-full w-48 h-48"
               alt={props.title}
             />
           </div>
-          <div class={tw`flex flex-col items-center text-center space-y-4`}>
-            <div class={tw`text-3xl font-semibold`}>{props.name}</div>
-            <div class={tw`text-2xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-lg text-gray-400`}>
+          <div class="flex flex-col items-center text-center space-y-4">
+            <div class="text-3xl font-semibold">{props.name}</div>
+            <div class="text-2xl text-chaos-foreground">{props.title}</div>
+            <div class="text-lg text-gray-400">
               {props.description}
             </div>
           </div>
@@ -41,14 +37,14 @@ interface CardPlainProps {
 
 export function CardPlain(props: CardPlainProps) {
   return (
-    <div class={tw`p-4`}>
-      <div class={tw`max-w-2xl rounded-xl w-full p-4`}>
-        <div class={tw`flex flex-col items-stretch space-y-4 text-center`}>
-          <div class={tw`text-3xl font-semibold`}>{props.title}</div>
+    <div class="p-4">
+      <div class="max-w-2xl rounded-xl w-full p-4">
+        <div class="flex flex-col items-stretch space-y-4 text-center">
+          <div class="text-3xl font-semibold">{props.title}</div>
           {props.description.map((desc, i) => (
             <div
               key={`desc${i}`}
-              class={tw`text-base text-zinc-100`}
+              class="text-base text-zinc-100"
             >
               {desc}
             </div>
@@ -68,9 +64,9 @@ interface CardChoiceProps {
 
 export function CardChoice(props: CardChoiceProps) {
   return (
-    <div class={tw`p-4 w-full`}>
+    <div class="p-4 w-full">
       <div
-        class={tw`
+        class="
         w-full
         p-4
         rounded-xl
@@ -85,21 +81,21 @@ export function CardChoice(props: CardChoiceProps) {
         ease-in-out
         group
         hover:-translate-y-1 hover:scale-110
-      `}
+      "
       >
-        <a href={props.link} class={tw`p-4`}>
-          <div class={tw`flex flex-col items-center w-full`}>
+        <a href={props.link} class="p-4">
+          <div class="flex flex-col items-center w-full">
             <img
               src={props.image}
-              class={tw`w-full md:h-48 md:w-48 object-cover rounded-full`}
+              class="w-full md:h-48 md:w-48 object-cover rounded-full"
               alt={props.title}
             />
           </div>
-          <span class={tw`flex-grow p-2 px-8`}>
-            <p class={tw`text-3xl font-bold pt-3 text-center`}>
+          <span class="flex-grow p-2 px-8">
+            <p class="text-3xl font-bold pt-3 text-center">
               {props.title}
             </p>
-            <div class={tw`py-3 text-center`}>
+            <div class="py-3 text-center">
               {props.description}
             </div>
           </span>
@@ -118,26 +114,26 @@ interface CardTimelineProps {
 
 export function CardTimeline(props: CardTimelineProps) {
   return (
-    <div class={tw`p-4 w-full`}>
-      <div class={tw`max-w-2xl rounded-xl w-full p-4`}>
+    <div class="p-4 w-full">
+      <div class="max-w-2xl rounded-xl w-full p-4">
         <div
-          class={tw`flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8`}
+          class="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8"
         >
-          <div class={tw`flex-shrink-0 flex justify-center`}>
+          <div class="flex-shrink-0 flex justify-center">
             <img
               src={props.image}
-              class={tw`object-cover rounded-full w-48 h-48`}
+              class="object-cover rounded-full w-48 h-48"
               alt={props.title}
             />
           </div>
           <div
-            class={tw`flex flex-col items-center lg:items-start text-left space-y-4`}
+            class="flex flex-col items-center lg:items-start text-left space-y-4"
           >
-            <div class={tw`text-base font-semibold uppercase`}>
+            <div class="text-base font-semibold uppercase">
               {props.time}
             </div>
-            <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-sm text-gray-400 text-justify`}>
+            <div class="text-xl text-chaos-foreground">{props.title}</div>
+            <div class="text-sm text-gray-400 text-justify">
               {props.description}
             </div>
           </div>
@@ -168,28 +164,28 @@ interface CardProjectProps {
 
 export function CardProject(props: CardProjectProps) {
   return (
-    <div class={tw`p-4 w-full`}>
-      <div class={tw`max-w-2xl rounded-xl w-full p-4`}>
+    <div class="p-4 w-full">
+      <div class="max-w-2xl rounded-xl w-full p-4">
         <div
-          class={tw`flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8`}
+          class="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8"
         >
-          <div class={tw`flex-shrink-0 flex justify-center`}>
+          <div class="flex-shrink-0 flex justify-center">
             <img
               src={props.image}
-              class={tw`object-cover rounded-full w-48 h-48`}
+              class="object-cover rounded-full w-48 h-48"
               alt={props.title}
             />
           </div>
           <div
-            class={tw`flex flex-col items-center lg:items-start text-left space-y-4`}
+            class="flex flex-col items-center lg:items-start text-left space-y-4"
           >
             <div
-              class={tw`text-base font-semibold uppercase flex flex-row items-center space-x-2`}
+              class="text-base font-semibold uppercase flex flex-row items-center space-x-2"
             >
               {props.links.map((link) => {
                 return (
-                  <a href={link.url} class = {tw`block transition duration-500 ease-in-out transform hover:-translate-y-0.5`} target="_blank">
-                    <span class = {tw`sr-only`}>Open {props.title}</span>
+                  <a href={link.url} class = "block transition duration-500 ease-in-out transform hover:-translate-y-0.5" target="_blank">
+                    <span class = "sr-only">Open {props.title}</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -207,8 +203,8 @@ export function CardProject(props: CardProjectProps) {
                 );
               })}
             </div>
-            <div class={tw`text-xl text-chaos-foreground`}>{props.title}</div>
-            <div class={tw`text-sm text-gray-400 text-justify`}>
+            <div class="text-xl text-chaos-foreground">{props.title}</div>
+            <div class="text-sm text-gray-400 text-justify">
               {props.description}
             </div>
           </div>

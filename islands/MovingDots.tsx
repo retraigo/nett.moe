@@ -1,17 +1,10 @@
-/** @jsx h */
-import { h } from "preact";
 import { useState } from "preact/hooks";
-import { tw } from "@twind";
+import { JSX } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
-const colors = ["#ffe6f9",
-"#ffb3ed",
-"#ff80e1",
-"#ff4dd5",
-"#ff1ac9",
-];
+const colors = ["#ffe6f9", "#ffb3ed", "#ff80e1", "#ff4dd5", "#ff1ac9"];
 
-export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
-  tw`bg-maid-100 bg-maid-200 bg-maid-300 bg-maid-400 bg-maid-500`
+export default function MovingDots(props: JSX.HTMLAttributes<SVGElement>) {
+  //tw`bg-maid-100 bg-maid-200 bg-maid-300 bg-maid-400 bg-maid-500`;
   const arr = new Array(5 + Math.floor(Math.random() * 10)).fill(null);
   const _items: [number, number][] = [];
   for (const _n in arr) {
@@ -42,7 +35,7 @@ export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
   }, 5000);
 
   return (
-    <svg width="100%" height="100%" class={tw`absolute -z-40 min-h-screen`}>
+    <svg width="100%" height="100%" class="absolute -z-40 min-h-screen">
       {items.map((poss, i) => (
         <g key={`bgItem-${i}`}>
           <marker
@@ -56,7 +49,7 @@ export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
             markerHeight="5"
           >
             <circle
-              class={tw`transition-all duration-[5000ms] ease-in transform absolute -z-30 rounded-full`}
+              class="transition-all duration-[5000ms] ease-in transform absolute -z-30 rounded-full"
               cx="10"
               stroke={colors[Math.floor(Math.random() * colors.length)]}
               fill={colors[Math.floor(Math.random() * colors.length)]}
@@ -66,7 +59,7 @@ export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
           </marker>
           <marker
             id={`startLine${i}`}
-            class={tw`relative`}
+            class="relative"
             viewBox="0 0 22 22"
             refX="10"
             refY="10"
@@ -75,7 +68,7 @@ export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
             markerHeight="5"
           >
             <circle
-              class={tw`transition-all duration-[5000ms] ease-in transform absolute -z-30 rounded-full`}
+              class="transition-all duration-[5000ms] ease-in transform absolute -z-30 rounded-full"
               cx="10"
               stroke={colors[Math.floor(Math.random() * colors.length)]}
               fill={colors[Math.floor(Math.random() * colors.length)]}
@@ -96,15 +89,15 @@ export default function MovingDots(props: h.JSX.HTMLAttributes<SVGElement>) {
                   ) / 100
                 }`}
                 stroke-width="0.5px"
-                class={tw`opacity-50 transition-all duration-[5000ms] ease-in transform ` + `item${i || 99}`}
+                class="opacity-50 transition-all duration-[5000ms] ease-in transform ` + `item${i || 99}"
                 stroke={colors[Math.floor(Math.random() * colors.length)]}
-
                 marker-end={`url(#endLine${i})`}
                 marker-start={!i ? `url(#startLine${i})` : undefined}
               />
             )}
         </g>
       ))}
+      <g class = "hidden bg-maid-100 bg-maid-200 bg-maid-300 bg-maid-400 bg-maid-500" />
     </svg>
   );
 }

@@ -1,12 +1,10 @@
-/** @jsx h */
-import { h } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
-import { tw } from "@twind";
+import { JSX } from "preact";
 
-export default function Footer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
+export default function Footer(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
     <footer>
-      <div class={tw`
+      <div class="
       dark:bg-chaos-primary/20 mt-72
       bg-chaos-primary/90
       text-white
@@ -15,9 +13,9 @@ export default function Footer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
       flex flex-col
       space-y-8
       items-center
-    `}>
-        <hr class={tw`max-w-6xl border border-chaos-foreground w-full`} />
-        <div class={tw`
+    ">
+        <hr class="max-w-6xl border border-chaos-foreground w-full" />
+        <div class="
         max-w-6xl
         flex flex-col items-center
         md:flex-row md:justify-center
@@ -28,14 +26,15 @@ export default function Footer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
         md:space-y-0
         items-start
         w-full
-      `}>
-          <div class={tw`p-2 flex flex-col space-y-4 items-center text-center`}>
-            <span class={tw`flex flex-row items-center text-chaos-foreground stroke-current stroke-1 space-x-2`}>
+      ">
+          <div class="p-2 flex flex-col space-y-4 items-center text-center">
+            <span class="flex flex-row items-center text-chaos-foreground stroke-current stroke-1 space-x-2">
               <a
                 href="https://github.com/retraigo"
                 target="_blank"
-                class={tw`font-semibold flex flex-row items-center`}
-              ><span class = {tw`sr-only`}>NeTT's GitHub</span>
+                class="font-semibold flex flex-row items-center"
+              >
+                <span class="sr-only">NeTT's GitHub</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -51,8 +50,9 @@ export default function Footer(props: h.JSX.HTMLAttributes<HTMLButtonElement>) {
               <a
                 href="https://twitter.com/retraigo"
                 target="_blank"
-                class={tw`font-semibold flex flex-row items-center`}
-              ><span class = {tw`sr-only`}>NeTT's Twitter</span>
+                class="font-semibold flex flex-row items-center"
+              >
+                <span class="sr-only">NeTT's Twitter</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
