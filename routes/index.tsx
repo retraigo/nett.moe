@@ -1,5 +1,3 @@
-
-
 import {
   CardChoice,
   CardPerson,
@@ -7,9 +5,12 @@ import {
   CardProject,
   CardTimeline,
 } from "../components/Cards.tsx";
+
+import { Logo } from "../components/Logo.tsx";
 import Timeline from "../data/Timeline.ts";
 import Projects from "../data/Projects.ts";
 import DefaultLayout from "../layouts/Default.tsx";
+import NeTT from "../islands/NeTT.tsx"
 
 /*
 @TIMELINE
@@ -49,14 +50,7 @@ export default function Home() {
     <DefaultLayout>
       <main class="flex-1 w-full max-w-7xl p-4 mx-auto md:px-8 py-4 mt-5">
         <div id="top" class="flex flex-col items-center space-y-72">
-          <div class="flex flex-col items-center mt-36">
-            <CardPerson
-              name="Pranev (NeTT)"
-              title="He who paints thy world in eternal nothingness"
-              description="...and writes weird javascript programs and websites. Also makes up cringe monologues and narrations."
-              image="/nett.webp"
-            />
-          </div>
+          <NeTT />
           <div class="flex flex-col items-center">
             <CardPlain
               title="About Me"
@@ -96,9 +90,8 @@ export default function Home() {
             */
           }{" "}
           <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
-            <span class="text-xl uppercase font-semibold">
-              The below is a list of "Project" of mine. By my definition, any
-              line of code I wrote for public use is considered a project.
+            <span class="text-3xl font-semibold text-center">
+              Projects I randomly made
             </span>
             <div class="grid grid-cols-1 gap-4">
               {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((
@@ -116,9 +109,7 @@ export default function Home() {
                 Pranev
               </a>
             </div>
-            <div
-              class="p-2 w-full flex space-x-2 items-center justify-center"
-            >
+            <div class="p-2 w-full flex space-x-2 items-center justify-center">
               <span>Made with</span>
               <a
                 href="https://fresh.deno.dev"
@@ -139,8 +130,7 @@ export default function Home() {
             </div>
             <div class="p-2 w-full">
               Credits to the color{"  "}
-              <span class="text-chaos-foreground">#fccef1</span>{" "}
-              for existing.
+              <span class="text-chaos-foreground">#fccef1</span> for existing.
             </div>
           </div>
         </div>

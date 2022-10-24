@@ -14,7 +14,7 @@ export default [
     {
         title: "Got into Web Dev",
         description: "Started out web development. Made a (no longer functional) website for the manga scanlation group \"Eidetic Memoscans\".",
-        image: "/placeholder/big_2.png",
+        image: "/placeholder/big_2.webp",
         time: "July 2020",
     },
     {
@@ -32,7 +32,7 @@ export default [
     {
         title: "Duration.js",
         description: "Released my first ever NPM module, duration.js.",
-        image: "/placeholder/big_3.png",
+        image: "/placeholder/big_3.webp",
         time: "January 2022",
     },
     {

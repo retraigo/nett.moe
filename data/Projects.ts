@@ -2,7 +2,7 @@ export default [
   {
     title: "duration.js",
     type: "TypeScript Module",
-    image: "/placeholder/big_3.png",
+    image: "/placeholder/big_3.webp",
     description:
       "Get formatted time duration from given milliseconds or a human-readable string. Also format the duration into a human-readable string.",
     links: [
@@ -58,7 +58,7 @@ export default [
   {
     title: "fortuna",
     type: "TypeScript Module",
-    image: "/placeholder/big_2.png",
+    image: "/placeholder/big_2.webp",
     description: "Weighted gacha system in TypeScript.",
     links: [
       {
@@ -103,7 +103,7 @@ export default [
   {
     title: "BetterMap",
     type: "TypeScript Module",
-    image: "/placeholder/ENLARGED_2.png",
+    image: "/placeholder/ENLARGED_2.webp",
     description: "An extension of the Typescript Map with Array-like features.",
     links: [
       {
@@ -147,7 +147,7 @@ export default [
   {
     title: "Lala",
     type: "TypeScript Module",
-    image: "/placeholder/ENLARGED_5.png",
+    image: "/lala.webp",
     description: "A collection of random text-generating functions.",
     links: [
       {
@@ -157,7 +157,7 @@ export default [
           path:
             "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22",
         }],
-        url: "https://github.com/retraigo/lala",
+        url: "https://github.com/la-lala-land/lala",
         title: "GitHub",
       },
       {
@@ -211,7 +211,7 @@ export default [
   {
     title: "denouse",
     type: "TypeScript Module",
-    image: "/placeholder/ENLARGED_7.png",
+    image: "/placeholder/ENLARGED_7.webp",
     description: "A collection of utility and math functions in TypeScript.",
     links: [
       {
@@ -246,7 +246,7 @@ export default [
   {
     title: "Cubic Bezier",
     type: "TypeScript Module",
-    image: "/placeholder/big_5.png",
+    image: "/placeholder/big_5.webp",
     description: "Generate points in cubic bezier curves.",
     links: [
       {
@@ -289,7 +289,7 @@ export default [
   {
     title: "Moe Counter",
     type: "Website",
-    image: "/placeholder/big_3.png",
+    image: "/placeholder/big_3.webp",
     description:
       "A moe counter number of views inspired by journey-ad/Moe-counter.",
     links: [
@@ -318,7 +318,7 @@ export default [
   {
     title: "ImportAll",
     type: "Deno Module",
-    image: "/placeholder/big_4.png",
+    image: "/placeholder/big_4.webp",
     description: "A small Deno module to import all files in a directory.",
     links: [
       {
@@ -352,7 +352,7 @@ export default [
   {
     title: "Tokino",
     type: "Discord Bot",
-    image: "/placeholder/ENLARGED_1.png",
+    image: "/placeholder/ENLARGED_1.webp",
     description: "A clock-like bot for Discord.",
     links: [
       {
@@ -370,7 +370,7 @@ export default [
   {
     title: "Meido",
     type: "Discord Bot",
-    image: "/placeholder/ENLARGED_2.png",
+    image: "/placeholder/ENLARGED_2.webp",
     description: "A welcome bot for Discord.",
     links: [
       {
@@ -388,7 +388,7 @@ export default [
   {
     title: "Toramaru",
     type: "Discord Bot",
-    image: "/placeholder/ENLARGED_3.png",
+    image: "/placeholder/ENLARGED_3.webp",
     description: "A Discord bot that joins a stage channel and plays anime songs.",
     links: [
       {
@@ -406,7 +406,7 @@ export default [
   {
     title: "La Lala",
     type: "Discord Bot",
-    image: "/placeholder/ENLARGED_4.png",
+    image: "/placeholder/ENLARGED_4.webp",
     description: "A discord bot for Lala.",
     links: [
       {

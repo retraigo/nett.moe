@@ -53,6 +53,7 @@ export default function DefaultLayout(props: { children: JSX.Element }) {
         <meta name="og:image" content="/schemingglowsmol.png" />
         <meta http-equiv="Content-Security-Policy" content="base-uri 'none';" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <script type="module" src="js/VRMComponent.js" />
       </Head>
       <div
         class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary"

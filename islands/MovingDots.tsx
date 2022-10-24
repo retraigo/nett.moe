@@ -4,8 +4,7 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 const colors = ["#ffe6f9", "#ffb3ed", "#ff80e1", "#ff4dd5", "#ff1ac9"];
 
 export default function MovingDots(props: JSX.HTMLAttributes<SVGElement>) {
-  //tw`bg-maid-100 bg-maid-200 bg-maid-300 bg-maid-400 bg-maid-500`;
-  const arr = new Array(5 + Math.floor(Math.random() * 10)).fill(null);
+  const arr = new Array(15 + Math.floor(Math.random() * 10)).fill(null);
   const _items: [number, number][] = [];
   for (const _n in arr) {
     _items.push([
@@ -88,11 +87,11 @@ export default function MovingDots(props: JSX.HTMLAttributes<SVGElement>) {
                     items[i + 1]?.[1] || poss[1]
                   ) / 100
                 }`}
-                stroke-width="0.5px"
+                stroke-width="0.5"
                 class="opacity-50 transition-all duration-[5000ms] ease-in transform ` + `item${i || 99}"
                 stroke={colors[Math.floor(Math.random() * colors.length)]}
                 marker-end={`url(#endLine${i})`}
-                marker-start={!i ? `url(#startLine${i})` : undefined}
+                marker-start={i === 0 ? `url(#startLine${i})` : undefined}
               />
             )}
         </g>
