@@ -8,16 +8,18 @@ interface CardPersonProps {
 export function CardPerson(props: CardPersonProps) {
   return (
     <div class="p-4">
-      <div class="max-w-2xl rounded-xl w-full p-4">
-        <div class="flex flex-col items-stretch space-y-8">
+      <div class="rounded-xl w-full p-4">
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center gap-8">
           <div class="shrink-0 flex justify-center">
             <img
               src={props.image}
-              class="object-cover rounded-full w-48 h-48"
+              class="object-cover rounded-full lg:rounded-none w-48 h-48 lg:w-96 lg:h-96"
               alt={props.title}
+              title="I wanted to make an SVG version but I never got to it."
+
             />
           </div>
-          <div class="flex flex-col items-center text-center space-y-4">
+          <div class="flex flex-col items-center text-center lg:text-left lg:items-start space-y-4">
             <div class="text-3xl font-semibold">{props.name}</div>
             <div class="text-2xl text-chaos-foreground">{props.title}</div>
             <div class="text-lg text-gray-400">
@@ -45,6 +47,29 @@ export function CardPlain(props: CardPlainProps) {
             <div
               key={`desc${i}`}
               class="text-base text-zinc-100"
+            >
+              {desc}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface JustSomeTextProps {
+  description: string[];
+}
+
+export function JustSomeText(props: JustSomeTextProps) {
+  return (
+    <div class="p-4">
+      <div class="rounded-xl w-full p-4">
+        <div class="flex flex-col items-stretch space-y-4 text-center lg:text-left">
+          {props.description.map((desc, i) => (
+            <div
+              key={`desc${i}`}
+              class="text-base lg:text-xl text-zinc-100"
             >
               {desc}
             </div>

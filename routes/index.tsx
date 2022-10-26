@@ -3,7 +3,7 @@
 import {
   CardChoice,
   CardPerson,
-  CardPlain,
+  JustSomeText,
   CardProject,
   CardTimeline,
 } from "../components/Cards.tsx";
@@ -47,7 +47,7 @@ const FabNav = [
 export default function Home() {
   return (
     <DefaultLayout>
-      <main class="flex-1 w-full max-w-7xl p-4 mx-auto md:px-8 py-4 mt-5">
+      <main class="flex-1 w-full max-w-10xl p-4 mx-auto md:px-8 py-4 mt-5">
         <div id="top" class="flex flex-col items-center space-y-72">
           <div class="flex flex-col items-center mt-36">
             <CardPerson
@@ -58,7 +58,7 @@ export default function Home() {
             />
           </div>
           <div class="flex flex-col items-center">
-            <CardPlain
+            <JustSomeText
               title="About Me"
               description={[
                 `I'm Pranev, aka NeTT, a college student who makes random JavaScript programs in my free time. I usually make websites and web apps using Vue and Nuxt.`,
@@ -97,8 +97,7 @@ export default function Home() {
           }{" "}
           <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
             <span class="text-xl uppercase font-semibold">
-              The below is a list of "Project" of mine. By my definition, any
-              line of code I wrote for public use is considered a project.
+              My (unpaid) Works
             </span>
             <div class="grid grid-cols-1 gap-4">
               {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((
