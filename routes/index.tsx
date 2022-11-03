@@ -49,7 +49,7 @@ export default function Home() {
     <DefaultLayout>
       <main class="flex-1 w-full max-w-10xl p-4 mx-auto md:px-8 py-4 mt-5">
         <div id="top" class="flex flex-col items-center space-y-72">
-          <div class="flex flex-col items-center mt-36">
+          <div class="flex flex-col items-center lg:mt-36">
             <CardPerson
               name="Pranev (NeTT)"
               title="He who paints thy world in eternal nothingness"
@@ -97,7 +97,7 @@ export default function Home() {
           }{" "}
           <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
             <span class="text-xl uppercase font-semibold">
-              My (unpaid) Works
+              My (assorted list of) (unpaid, personal) Works
             </span>
             <div class="grid grid-cols-1 gap-4">
               {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((

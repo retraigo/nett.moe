@@ -207,7 +207,7 @@ export default [
       }
     ],
   },
-
+/*
   {
     title: "denouse",
     type: "TypeScript Module",
@@ -286,12 +286,13 @@ export default [
       }
     ],
   },
+  */
   {
     title: "Moe Counter",
     type: "Website",
     image: "/placeholder/big_3.png",
     description:
-      "A moe counter number of views inspired by journey-ad/Moe-counter.",
+      "A moe counter for number of page views, github stars, and stuff, inspired by journey-ad/Moe-counter.",
     links: [
       {
         viewbox: "0 0 24 24",
@@ -353,7 +354,7 @@ export default [
     title: "Tokino",
     type: "Discord Bot",
     image: "/placeholder/ENLARGED_1.png",
-    description: "A clock-like bot for Discord.",
+    description: "A clock-like bot for Discord with Node.js and Eris.",
     links: [
       {
         viewbox: "0 0 24 24",
@@ -371,7 +372,7 @@ export default [
     title: "Meido",
     type: "Discord Bot",
     image: "/placeholder/ENLARGED_2.png",
-    description: "A welcome bot for Discord.",
+    description: "A welcome bot for Discord with Node.js and Eris.",
     links: [
       {
         viewbox: "0 0 24 24",
@@ -389,7 +390,7 @@ export default [
     title: "Toramaru",
     type: "Discord Bot",
     image: "/placeholder/ENLARGED_3.png",
-    description: "A Discord bot that joins a stage channel and plays anime songs.",
+    description: "A Discord bot that joins a stage channel and plays anime songs with Node.js and Eris.",
     links: [
       {
         viewbox: "0 0 24 24",
@@ -407,7 +408,7 @@ export default [
     title: "La Lala",
     type: "Discord Bot",
     image: "/placeholder/ENLARGED_4.png",
-    description: "A discord bot for Lala.",
+    description: "A discord bot for Lala with Node.js and Eris.",
     links: [
       {
         viewbox: "0 0 24 24",
