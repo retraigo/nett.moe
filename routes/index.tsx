@@ -59,7 +59,6 @@ export default function Home() {
           </div>
           <div class="flex flex-col items-center">
             <JustSomeText
-              title="About Me"
               description={[
                 `I'm Pranev, aka NeTT, a college student who makes random JavaScript programs in my free time. I usually make websites and web apps using Vue and Nuxt.`,
                 `Started programming like back in 2020 when I had nothing better to do. Ended up getting quite into it.`,
