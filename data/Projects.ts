@@ -147,7 +147,7 @@ export default [
   {
     title: "Lala",
     type: "TypeScript Module",
-    image: "/placeholder/ENLARGED_5.png",
+    image: "/lala.webp",
     description: "A collection of random text-generating functions.",
     links: [
       {
