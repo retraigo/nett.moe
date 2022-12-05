@@ -106,7 +106,7 @@ export default function Home() {
           }{" "}
           <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
             <span class="text-xl uppercase font-semibold">
-              My (assorted list of) (unpaid, personal) Works
+              My (assorted list of) (unpaid, personal, open-source) Works
             </span>
             <div class="grid grid-cols-1 gap-4">
               {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((
