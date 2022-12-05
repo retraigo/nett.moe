@@ -1,11 +1,9 @@
-
-
 import {
   CardChoice,
   CardPerson,
-  JustSomeText,
   CardProject,
   CardTimeline,
+  JustSomeText,
 } from "../components/Cards.tsx";
 import Timeline from "../data/Timeline.ts";
 import Projects from "../data/Projects.ts";
@@ -66,6 +64,18 @@ export default function Home() {
               ]}
             />
           </div>
+          <div class="flex flex-col items-center space-y-8">
+            <span class="text-xl uppercase font-semibold">
+              Stuff I do
+            </span>
+            <JustSomeText
+              description={[
+                `Web Design / Development`,
+                `Discord Bot Development`,
+                `Email me at nett@nett.moe for commissions.`,
+              ]}
+            />
+          </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <CardChoice
               title="Kuro's Chaos Abyss"
@@ -114,9 +124,7 @@ export default function Home() {
                 Pranev
               </a>
             </div>
-            <div
-              class="p-2 w-full flex space-x-2 items-center justify-center"
-            >
+            <div class="p-2 w-full flex space-x-2 items-center justify-center">
               <span>Made with</span>
               <a
                 href="https://fresh.deno.dev"
@@ -137,8 +145,7 @@ export default function Home() {
             </div>
             <div class="p-2 w-full">
               Credits to the color{"  "}
-              <span class="text-chaos-foreground">#fccef1</span>{" "}
-              for existing.
+              <span class="text-chaos-foreground">#fccef1</span> for existing.
             </div>
           </div>
         </div>
