@@ -4,6 +4,7 @@ import Footer from "../components/Footer.tsx";
 import { Head } from "$fresh/runtime.ts";
 import { JSX } from "preact"
 import MovingDots from "../islands/MovingDots.tsx";
+import MovingNeTT from "../islands/MovingNett.tsx";
 import Fab from "../islands/Fab.tsx";
 
 const FabNav = [
@@ -57,7 +58,7 @@ export default function DefaultLayout(props: { children: JSX.Element }) {
       <div
         class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary"
       >
-        <MovingDots />
+        <MovingNeTT />
       </div>
       <div
         class="
