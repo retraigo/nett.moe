@@ -7,7 +7,6 @@ import {
 } from "../components/Cards.tsx";
 import Timeline from "../data/Timeline.ts";
 import Projects from "../data/Projects.ts";
-import DefaultLayout from "../layouts/Default.tsx";
 
 /*
 @TIMELINE
@@ -44,7 +43,6 @@ const FabNav = [
 
 export default function Home() {
   return (
-    <DefaultLayout>
       <main class="flex-1 w-full max-w-10xl p-4 mx-auto md:px-8 py-4 mt-5">
         <div id="top" class="flex flex-col items-center space-y-72">
           <div class="flex flex-col items-center lg:mt-36">
@@ -106,7 +104,7 @@ export default function Home() {
           }{" "}
           <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
             <span class="text-xl uppercase font-semibold">
-              My (assorted list of) (unpaid, personal, open-source) Works
+              My (assorted, outdated list of) (unpaid, personal, open-source) Works
             </span>
             <div class="grid grid-cols-1 gap-4">
               {Projects.sort((a, b) => (a.title.localeCompare(b.title))).map((
@@ -150,6 +148,5 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </DefaultLayout>
   );
 }

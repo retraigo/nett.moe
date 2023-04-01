@@ -1,11 +1,10 @@
-
-
 import Footer from "../components/Footer.tsx";
-import { Head } from "$fresh/runtime.ts";
-import { JSX } from "preact"
+import { asset, Head } from "$fresh/runtime.ts";
+import { JSX } from "preact";
 import MovingDots from "../islands/MovingDots.tsx";
 import MovingNeTT from "../islands/MovingNett.tsx";
 import Fab from "../islands/Fab.tsx";
+import type { AppProps } from "$fresh/src/server/types.ts";
 
 const FabNav = [
   {
@@ -33,35 +32,37 @@ const FabNav = [
   },
 ];
 
-export default function DefaultLayout(props: { children: JSX.Element }) {
+export default function App({ Component }: AppProps) {
   return (
-    <div
-      class="
-      flex flex-col
-      min-h-screen
-      font-montserrat
-      text-lg
-      tracking-wide
-      text-gray-300
-    "
-    >
+    <html>
       <Head>
+        <link rel="shortcut icon" href={asset(`/favicon.ico`)} />
         <title>Tis I - NeTT!</title>
         <meta name="title" content="NeTT" />
         <meta name="description" content="Just my personal website." />
         <meta name="theme-color" content="#fccef1" />
         <meta name="og:host" content="https://nett.moe" />
         <meta name="og:image" content="/schemingglowsmol.png" />
-        <meta http-equiv="Content-Security-Policy" content="base-uri 'none';" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="base-uri 'none';"
+        />
       </Head>
-      <div
-        class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary"
-      >
-        <MovingNeTT />
-      </div>
-      <div
-        class="
+      <body>
+        <div class="min-h-screen tracking-wide flex flex-col items-stretch">
+          <main class="flex-1">
+            <div class="
+      flex flex-col
+      min-h-screen
+      font-montserrat
+      text-lg
+      tracking-wide
+      text-gray-300
+    ">
+              <div class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary">
+                <MovingDots />
+              </div>
+              <div class="
         inset-0
         w-full
         fixed
@@ -71,11 +72,14 @@ export default function DefaultLayout(props: { children: JSX.Element }) {
         pointer-events-none
         bg-chaos-primary
         opacity-50
-      "
-      />
-      {props.children}
-      <Fab nav={FabNav} />
-      <Footer />
-    </div>
+      " />
+              <Component />
+              <Fab nav={FabNav} />
+              <Footer />
+            </div>
+          </main>
+        </div>
+      </body>
+    </html>
   );
 }
