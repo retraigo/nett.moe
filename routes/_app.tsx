@@ -49,35 +49,16 @@ export default function App({ Component }: AppProps) {
         />
       </Head>
       <body>
-        <div class="min-h-screen tracking-wide flex flex-col items-stretch">
+        <div class="min-h-screen flex flex-col font-montserrat text-lg tracking-wide text-gray-300 items-stretch">
           <main class="flex-1">
-            <div class="
-      flex flex-col
-      min-h-screen
-      font-montserrat
-      text-lg
-      tracking-wide
-      text-gray-300
-    ">
-              <div class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary">
-                <MovingDots />
-              </div>
-              <div class="
-        inset-0
-        w-full
-        fixed
-        h-full
-        -z-10
-        block
-        pointer-events-none
-        bg-chaos-primary
-        opacity-50
-      " />
-              <Component />
-              <Fab nav={FabNav} />
-              <Footer />
+            <div class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary">
+              <MovingDots />
             </div>
+            <div class="inset-0 w-full fixed h-full -z-10 block pointer-events-none bg-chaos-primary opacity-50" />
+            <Component />
+            <Fab nav={FabNav} />
           </main>
+          <Footer />
         </div>
       </body>
     </html>

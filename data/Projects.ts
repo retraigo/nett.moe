@@ -42,16 +42,6 @@ export default [
         url: "https://deno.land/x/durationjs",
         title: "Deno",
       },
-      {
-        viewbox: "0 0 24 24",
-        icon: [{
-          fill: "transparent",
-          path:
-            "M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z M 13 2 L 13 9 L 20 9",
-        }],
-        url: "https://docs.nekooftheabyss.moe/duration",
-        title: "Documentation",
-      },
     ],
   },
 
@@ -87,16 +77,6 @@ export default [
         url: "https://deno.land/x/fortuna",
         title: "Deno",
       },
-      {
-        viewbox: "0 0 24 24",
-        icon: [{
-          fill: "transparent",
-          path:
-            "M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z M 13 2 L 13 9 L 20 9",
-        }],
-        url: "https://docs.nekooftheabyss.moe/fortuna",
-        title: "Documentation",
-      },
     ],
   },
 
@@ -131,16 +111,6 @@ export default [
         }],
         url: "https://deno.land/x/bettermap",
         title: "Deno",
-      },
-      {
-        viewbox: "0 0 24 24",
-        icon: [{
-          fill: "transparent",
-          path:
-            "M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z M 13 2 L 13 9 L 20 9",
-        }],
-        url: "https://docs.nekooftheabyss.moe/bettermap",
-        title: "Documentation",
       },
     ],
   },
@@ -191,23 +161,14 @@ export default [
         icon: [{
           fill: "transparent",
           path:
-            "M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z M 13 2 L 13 9 L 20 9",
-        }],
-        url: "https://docs.nekooftheabyss.moe/lala",
-        title: "Documentation",
-      },
-      {
-        viewbox: "0 0 24 24",
-        icon: [{
-            fill: "transparent",
-            path: "M 2 12 L 22 12 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z M 12 12 m -10 0 a 10 10 0 1 1 20 0 a 10 10 0 1 1 -20 0",
+            "M 2 12 L 22 12 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z M 12 12 m -10 0 a 10 10 0 1 1 20 0 a 10 10 0 1 1 -20 0",
         }],
         url: "https://lala.nett.moe",
-        title: "Website"
-      }
+        title: "Website",
+      },
     ],
   },
-/*
+  /*
   {
     title: "denouse",
     type: "TypeScript Module",
@@ -307,15 +268,16 @@ export default [
       {
         viewbox: "0 0 24 24",
         icon: [{
-            fill: "transparent",
-            path: "M 2 12 L 22 12 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z M 12 12 m -10 0 a 10 10 0 1 1 20 0 a 10 10 0 1 1 -20 0",
+          fill: "transparent",
+          path:
+            "M 2 12 L 22 12 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z M 12 12 m -10 0 a 10 10 0 1 1 20 0 a 10 10 0 1 1 -20 0",
         }],
-        url: "https://count.nekooftheabyss.moe",
-        title: "Website"
-      }
+        url: "https://count.nett.moe",
+        title: "Website",
+      },
     ],
   },
-
+  /*
   {
     title: "ImportAll",
     type: "Deno Module",
@@ -350,11 +312,12 @@ export default [
       },
     ],
   },
+  */
   {
     title: "Monke",
     type: "TypeScript Module",
     image: "/lala.webp",
-    description: "Color-related stuff in TypeScript",
+    description: "Color image quantization and dithering in TypeScript",
     links: [
       {
         viewbox: "0 0 24 24",
@@ -384,6 +347,25 @@ export default [
       },
     ],
   },
+  {
+    title: "Text Vectorizer",
+    type: "TypeScript Module",
+    image: "/lala.webp",
+    description: "Convert text into vectors.",
+    links: [
+      {
+        viewbox: "0 0 24 24",
+        icon: [{
+          fill: "transparent",
+          path:
+            "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22",
+        }],
+        url: "https://github.com/retraigo/text-vectorizer",
+        title: "GitHub",
+      },
+    ],
+  },
+  /*
   {
     title: "Tokino",
     type: "Discord Bot",
@@ -456,4 +438,5 @@ export default [
       },
     ],
   },
+  */
 ];

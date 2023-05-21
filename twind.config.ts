@@ -1,9 +1,46 @@
-import { defineConfig } from "twind";
+import { defineConfig, ThemeRuleResolver } from "twind";
 import presetTailwind from "preset-tailwind";
+import presetTypography from "preset-typography";
 
 export default {
   ...defineConfig({
-    presets: [presetTailwind()],
+    presets: [
+      presetTailwind(),
+      presetTypography({
+        defaultColor: "zinc",
+        colors: {
+          body: "300",
+          bold: "100",
+          /*
+          '[class~="lead"]': "400",
+
+          a: "100",
+          strong: "100",
+          "ul > li::before": {
+            backgroundColor: "700",
+          },
+          blockquote: {
+            color: "100",
+            borderLeftColor: "800",
+          },
+          */
+          headings: "100",
+          code: "100",
+          "pre-bg": "bg-chaos-secondary"
+          /*
+          pre: {
+            color: "200",
+            backgroundColor: "800",
+          },
+          thead: {
+            color: "100",
+            borderBottomColor: "700",
+          },
+          "tbody tr": { borderBottomColor: "800" },
+          */
+        },
+      }),
+    ],
     darkMode: "media", // or 'media' or 'class'
     theme: {
       extend: {

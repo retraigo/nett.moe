@@ -8,6 +8,7 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
     "twind": "https://esm.sh/@twind/core@1.1.3",
     "twind/": "https://esm.sh/@twind/core@1.1.3/",
-    "preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.1.4"
+    "preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.1.4",
+    "preset-typography": "https://esm.sh/@twind/preset-typography@1.0.7"
   }
 }
