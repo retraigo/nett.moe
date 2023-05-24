@@ -5,8 +5,8 @@ export default function Footer(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   return (
     <footer>
       <div class="
-      dark:bg-chaos-primary/20 mt-72
-      bg-chaos-primary/90
+      dark:bg-black/20 mt-72
+      bg-black/90
       text-white
       md:h-48
       p-8

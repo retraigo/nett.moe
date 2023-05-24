@@ -51,10 +51,10 @@ export default function App({ Component }: AppProps) {
       <body>
         <div class="min-h-screen flex flex-col font-montserrat text-lg tracking-wide text-gray-300 items-stretch">
           <main class="flex-1">
-            <div class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-chaos-primary">
+            <div class="inset-0 w-full fixed h-full -z-50 block pointer-events-none bg-black">
               <MovingDots />
             </div>
-            <div class="inset-0 w-full fixed h-full -z-10 block pointer-events-none bg-chaos-primary opacity-50" />
+            <div class="inset-0 w-full fixed h-full -z-10 block pointer-events-none bg-zinc-900 opacity-50" />
             <Component />
             <Fab nav={FabNav} />
           </main>
