@@ -8,3 +8,5 @@
 | User accounts and stuff                                                   | $100                                                                                 |
 | One-time Setup Fee                                                        | > $120 (depending on domain name and website size) (may be small for small websites) |
 | Maintenance                                                               | > $120 / yr (depending on domain name and website size)                              |
+
+Contact me via Discord (NeTT#1172) for commissions or mail me at nett@nett.moe.
