@@ -11,7 +11,7 @@ export default function BlogPost(props: PageProps) {
     const BodyContent = render(md);
     return (
       <main class="mx-auto items-center flex flex-col">
-        <div class="prose p-8 bg-chaos-primary prose-code:before:content-none prose-code:after:content-none" dangerouslySetInnerHTML={{ __html: BodyContent }}>
+        <div class="prose p-8 prose-code:before:content-none prose-code:after:content-none" dangerouslySetInnerHTML={{ __html: BodyContent }}>
         </div>
       </main>
     );
