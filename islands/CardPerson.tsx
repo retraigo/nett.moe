@@ -58,6 +58,13 @@ export default function CardPerson(props: CardPersonProps) {
                 )
                 : props.title}
             </div>
+            { img === 999 && (
+              <audio autoPlay loop>
+                <source src="/lalalalalala.wav" type="audio/wav" />
+                <source src="/lalalalalala.ogg" type="audio/ogg" />
+                <source src="/lalalalalala.mp3" type="audio/mp3" />
+              </audio>
+            )}
             <div class="text-lg text-gray-400">
               {img === 999
                 ? new Array(Math.ceil(Math.random() * 5)).fill(LALADESC).join(

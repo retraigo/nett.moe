@@ -16,6 +16,7 @@ export default function BlogPost(props: PageProps) {
       </main>
     );
   } catch (e) {
+    console.error(e)
     return (
       <main>
         <div class="prose">
