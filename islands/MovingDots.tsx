@@ -5,7 +5,7 @@ const colors = ["#ffe6f9", "#ffb3ed", "#ff80e1", "#ff4dd5", "#ff1ac9"];
 
 export default function MovingDots(props: JSX.HTMLAttributes<SVGElement>) {
   //tw`bg-maid-100 bg-maid-200 bg-maid-300 bg-maid-400 bg-maid-500`;
-  const arr = new Array(5 + Math.floor(Math.random() * 10)).fill(null);
+  const arr = new Array(10 + Math.floor(Math.random() * 10)).fill(null);
   const _items: [number, number][] = [];
   for (const _n in arr) {
     _items.push([

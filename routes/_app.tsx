@@ -47,6 +47,7 @@ export default function App({ Component }: AppProps) {
           http-equiv="Content-Security-Policy"
           content="base-uri 'none';"
         />
+        <link rel="stylesheet" href="/tailwind.css" />
       </Head>
       <body>
         <div class="min-h-screen flex flex-col font-montserrat text-lg tracking-wide text-gray-300 items-stretch">
