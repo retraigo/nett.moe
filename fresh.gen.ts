@@ -3,9 +3,11 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
+import * as $colors from "./routes/colors.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $page_slug_ from "./routes/page/[slug].tsx";
 import * as $CardPerson from "./islands/CardPerson.tsx";
+import * as $ColorWizard from "./islands/ColorWizard.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Fab from "./islands/Fab.tsx";
 import * as $MovingDots from "./islands/MovingDots.tsx";
@@ -15,11 +17,13 @@ import { type Manifest } from "$fresh/server.ts";
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
+    "./routes/colors.tsx": $colors,
     "./routes/index.tsx": $index,
     "./routes/page/[slug].tsx": $page_slug_,
   },
   islands: {
     "./islands/CardPerson.tsx": $CardPerson,
+    "./islands/ColorWizard.tsx": $ColorWizard,
     "./islands/Counter.tsx": $Counter,
     "./islands/Fab.tsx": $Fab,
     "./islands/MovingDots.tsx": $MovingDots,

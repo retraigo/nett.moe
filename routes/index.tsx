@@ -1,46 +1,11 @@
 import {
   CardChoice,
   CardProject,
-  CardTimeline,
   JustSomeText,
 } from "../components/Cards.tsx";
 
 import CardPerson from "../islands/CardPerson.tsx";
-import Timeline from "../data/Timeline.ts";
 import Projects from "../data/Projects.ts";
-
-/*
-@TIMELINE
-<div class="grid grid-cols-1 gap-4">
-{Timeline.map((x) => <CardTimeline {...x} />)}
-</div>
-*/
-
-const FabNav = [
-  {
-    name: "Top",
-    action: "/#top",
-    key: "top",
-    toolTip: "Go To Top",
-    routeIcon: "M18 15 L12 9 L6 15",
-  },
-  {
-    name: "Timeline",
-    action: "/#timeline",
-    key: "timeline",
-    toolTip: "Timeline",
-    routeIcon:
-      "M 12 6 L 12 12 L 16 14 M 12 12 m -10 0 a 10 10 0 1 1 20 0 a 10 10 0 1 1 -20 0",
-  },
-  {
-    name: "Projects",
-    action: "/#projects",
-    key: "projects",
-    toolTip: "Projects",
-    routeIcon:
-      "M 2 3 L 22 3 L 22 17 L 2 17 L 2 3 M 8 21 L 16 21 M 12 17 L 12 21",
-  },
-];
 
 export default function Home() {
   return (
@@ -102,20 +67,6 @@ export default function Home() {
             link="https://www.youtube.com/channel/UCBwjrG9IYWH97PDDhl72NMQ/"
           />
         </div>
-        {
-          /*
-          <div id="timeline" class="flex flex-col space-y-4 max-w-2xl">
-            <span class="text-xl uppercase font-semibold">
-              The timeline below does not include any kind of paid work I have
-              done. A timeline for commissions and other paid work might be
-              coming soon.
-            </span>
-
-// TEMPORARILY REMOVED @TIMELINE
-
-          </div>
-            */
-        }{" "}
         <div id="projects" class="flex flex-col space-y-4 max-w-2xl">
           <span class="text-xl uppercase font-semibold">
             My (assorted, outdated list of) (unpaid, personal, open-source)
