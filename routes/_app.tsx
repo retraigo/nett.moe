@@ -2,7 +2,6 @@ import Footer from "../components/Footer.tsx";
 import { asset, Head } from "$fresh/runtime.ts";
 import { JSX } from "preact";
 import MovingDots from "../islands/MovingDots.tsx";
-import MovingNeTT from "../islands/MovingNett.tsx";
 import Fab from "../islands/Fab.tsx";
 import type { AppProps } from "$fresh/src/server/types.ts";
 

@@ -35,7 +35,7 @@ export default function MovingDots(props: JSX.HTMLAttributes<SVGElement>) {
   }, 5000);
 
   return (
-    <svg width="100%" height="100%" class="absolute -z-40 min-h-screen">
+    <svg width="100%" height="100%" class="fixed top-0 left-0 -z-40 min-h-screen">
       {items.map((poss, i) => (
         <g key={`bgItem-${i}`}>
           <marker

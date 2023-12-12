@@ -1,4 +1,6 @@
 import { useState } from "preact/hooks";
+import MovingNeTT from "./MovingNett.tsx";
+import MovingDots from "./MovingDots.tsx";
 
 //
 //
@@ -36,6 +38,20 @@ export default function CardPerson(props: CardPersonProps) {
   };
   return (
     <div class="p-4">
+      {img === 999 && (
+        <>
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+          <MovingDots />
+        </>
+      )}
       <div class="rounded-xl w-full p-4">
         <div class="flex flex-col lg:flex-row items-stretch lg:items-center gap-8">
           <div class="shrink-0 flex justify-center">
@@ -58,7 +74,7 @@ export default function CardPerson(props: CardPersonProps) {
                 )
                 : props.title}
             </div>
-            { img === 999 && (
+            {img === 999 && (
               <audio autoPlay loop>
                 <source src="/lalalalalala.wav" type="audio/wav" />
                 <source src="/lalalalalala.ogg" type="audio/ogg" />
