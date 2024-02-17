@@ -36,7 +36,7 @@
                             :class="`relative w-48 transition duration-500 ease-in-out ${subMenuOpen[i] ? `translate-y-0` : `-translate-y-[100rem]`}`"
                             :style="{ transitionDelay: `${j * 0.1}s` }">
                             <a class="flex items-center gap-2 p-[0.5rem] h-[3rem] w-full text-black border transition-all duration-500 ease-in-out bg-chaos-foreground hover:bg-chaos-primary hover:border-chaos-foreground hover:text-chaos-foreground stroke-black hover:stroke-chaos-foreground"
-                                :href="subItem.href" target="_blank">
+                                :href="subItem.href" target="_blank" @click="playSelect">
                                 <svg :class="`block h-8 w-8 stroke-1`" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" :d="`${subItem.icon}`" />
@@ -48,7 +48,11 @@
                 </div>
             </div>
         </div>
-        <div class="hidden before:top-[0.5rem] before:top-[4rem] before:top-[7.5rem] before:top-[11rem] before:top-[14.5rem] before:top-[18rem] before:top-[21.5rem] before:top-[25rem] before:top-[28.5rem]" />
+        <audio ref="menuOpen" src="/music/menu_open.wav" />
+        <audio ref="menuHover" src="/music/menu_hover.wav" />
+        <audio ref="menuSelect" src="/music/menu_select.wav" />
+        <div
+            class="hidden before:top-[0.5rem] before:top-[4rem] before:top-[7.5rem] before:top-[11rem] before:top-[14.5rem] before:top-[18rem] before:top-[21.5rem] before:top-[25rem] before:top-[28.5rem]" />
     </div>
 </template>
 <style>
@@ -65,6 +69,10 @@
 type MenuItem = { href: string, icon: string, name: string };
 type SubMenu = { name: string, icon: string, items: MenuItem[] }
 
+const menuSelect = ref<HTMLAudioElement | null>(null)
+const menuHover = ref<HTMLAudioElement | null>(null)
+const menuOpen = ref<HTMLAudioElement | null>(null)
+
 const { menu } = defineProps<{ menu: SubMenu[] }>()
 
 const navOpen = ref(false);
@@ -73,12 +81,22 @@ const subMenuOpen = reactive(new Array(menu.length).fill(false))
 function swapNav() {
     closeAllSub()
     navOpen.value = !navOpen.value
+    // @ts-ignore pls
+    menuOpen.value.currentTime = 0
+    menuOpen.value?.play()
+}
+
+function playSelect() {
+    menuSelect.value?.play()
 }
 
 function swapSub(i: number) {
     const temp = !subMenuOpen[i]
     closeAllSub()
     subMenuOpen[i] = temp
+    // @ts-ignore pls
+    menuHover.value.currentTime = 0
+    menuHover.value?.play()
 }
 
 function closeAllSub() {
