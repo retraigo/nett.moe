@@ -30,8 +30,8 @@
                         <span :class="`text-xs font-semibold uppercase ${subMenuOpen.some(x => x) ? `hidden` : `block`}`">{{
                             item.name }}</span>
                     </button>
-                    <div
-                        :class="`absolute left-[4rem] top-0 flex flex-col items-stretch gap-2 transition duration-500 ease-in-out ${subMenuOpen[i] ? `translate-y-0` : `-translate-y-[100rem]`}`">
+                    <div :style="{borderImage: `linear-gradient(to top, transparent, #ffcef1 20%, #ffcef1 80%, transparent) 0 0 0 1`}"
+                        :class="`submenu border px-1 absolute left-[5rem] top-0 flex flex-col items-stretch gap-2 transition duration-500 ease-in-out ${subMenuOpen[i] ? `translate-y-0` : `-translate-y-[100rem]`}`">
                         <div v-for="subItem, j in item.items" class="relative w-48">
                             <a class="flex items-center gap-2 p-[0.5rem] h-[3rem] w-full text-black border transition-all duration-500 ease-in-out bg-chaos-foreground hover:bg-chaos-primary hover:border-chaos-foreground hover:text-chaos-foreground stroke-black hover:stroke-chaos-foreground"
                                 :href="subItem.href" target="_blank">
@@ -48,6 +48,18 @@
         </div>
     </div>
 </template>
+<style>
+.submenu:before {
+	position: absolute;
+	content: '';
+	border-right: 1rem solid #ffcef1;
+	border-top: 0.7rem solid transparent;
+	border-bottom: 0.7rem solid transparent;
+	left: -1rem;
+	top: 1rem;
+}
+
+</style>
 <script setup lang="ts">
 type MenuItem = { href: string, icon: string, name: string };
 type SubMenu = { name: string, icon: string, items: MenuItem[] }
