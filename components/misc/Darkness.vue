@@ -18,7 +18,7 @@
                     <span class="font-cinzel tracking-wider">Pranev (NeTT)</span>
                 </div>
                 <div ref="midlogo"
-                    :style="{ maskImage: `radial-gradient(circle at ${coordinates.x}px ${coordinates.y}px, black 40%, transparent 100%)` }"
+                    :style="{ maskImage: `radial-gradient(circle at ${coordinates.x}px ${coordinates.y}px, black 20%, transparent 100%)` }"
                     class="midtext transition-all duration-500 ease-in-out mt-8">
                     <div class="flex flex-col items-center mx-auto">
                         <img src="/nettdoru.webp"
@@ -102,7 +102,7 @@
         transform: translate(3px, 2px) rotate(0deg);
     }
 
-    40% {
+    20% {
         transform: translate(1px, -1px) rotate(1deg);
     }
 
@@ -196,7 +196,7 @@ function move(e: { pageX: number; pageY: number }) {
     coordinates.value.x = e.pageX - 100;
     coordinates.value.y = e.pageY;
 
-    let logoGradient = `radial-gradient(circle at ${e.pageX - textRect.left}px ${e.pageY - textRect.top}px, black 40%, transparent 100%)`;
+    let logoGradient = `radial-gradient(circle at ${e.pageX - textRect.left}px ${e.pageY - textRect.top}px, black 20%, transparent 100%)`;
     //@ts-ignore Just ignore
     midtext.value.style["-webkit-mask-image"] = logoGradient;
     //@ts-ignore Just ignore
@@ -204,7 +204,7 @@ function move(e: { pageX: number; pageY: number }) {
     midtext.value.style.opacity = `${Math.min(Math.max(size / 4, 0.7), 1)}`;
 
     textRect = midlogo.value.getBoundingClientRect();
-    logoGradient = `radial-gradient(circle at ${e.pageX - textRect.left}px ${e.pageY - textRect.top}px, black 40%, transparent 100%)`;
+    logoGradient = `radial-gradient(circle at ${e.pageX - textRect.left}px ${e.pageY - textRect.top}px, black 20%, transparent 100%)`;
 
     //@ts-ignore Just ignore
     midlogo.value.style["-webkit-mask-image"] = logoGradient;
