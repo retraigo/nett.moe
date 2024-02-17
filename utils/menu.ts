@@ -18,6 +18,11 @@ export const MainMenu = [
         href: "https://github.com/retraigo/deno-ml",
         icon: AllIcons.github,
       },
+      {
+        name: "<Dummy>",
+        href: "https://github.com/retraigo/deno-ml",
+        icon: AllIcons.book,
+      },
     ],
   },
   {
@@ -56,9 +61,19 @@ export const MainMenu = [
         icon: AllIcons.github,
       },
       {
+        name: "La Lala",
+        href: "https://lala.nett.moe",
+        icon: AllIcons.globe,
+      },
+      {
         name: "KV Chopper",
         href: "https://kv-chopper.deno.dev",
         icon: AllIcons.globe,
+      },
+      {
+        name: "This Website",
+        href: "https://nett.moe",
+        icon: AllIcons.home,
       },
     ],
   },
@@ -80,6 +95,11 @@ export const MainMenu = [
         name: "LinkedIn",
         href: "https://linkedin.com/in/pranevss",
         icon: AllIcons.linkedin,
+      },
+      {
+        name: "Facebook",
+        href: "https://facebook.com/retraigo",
+        icon: AllIcons.facebook,
       },
     ],
   },
