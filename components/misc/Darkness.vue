@@ -8,35 +8,29 @@
         <div ref="topcontainer" class="top-container group">
             <div class="main-content fixed inset-0 top-0 left-0 w-full h-screen z-30" @mousemove="movedaro"
                 @touchmove="touchdaro" @mouseenter="() => (isTouched = true)" @mouseleave="onLeave"
-                @touchstart="() => (isTouched = true)" @touchend="onLeave" @click="playAudio">
+                @touchstart="() => (isTouched = true)" @touchend="onLeave">
                 <div :class="`movingPointer transition-opacity duration-500`" ref="movingthing"
                     :style="{ left: coordinates.x - 60 + 'px', top: coordinates.y - 260 + 'px', }" />
             </div>
-            <div class="relative z-20 overflow-visible">
+            <div class="relative z-20">
                 <div ref="midtext"
-                    class="midtext overflow-visible text-5xl lg:text-6xl lg:mt-16 xl:text-8xl transition-opacity duration-500 ease-in-out mt-12">
-                    <span class="font-arial tracking-wider">{{ touches >= 999 ? LALA : `Pranev (NeTT)` }}</span>
+                    class="midtext text-5xl lg:text-6xl lg:mt-16 xl:text-8xl transition-all duration-500 ease-in-out mt-12">
+                    <span class="font-cinzel tracking-wider">Pranev (NeTT)</span>
                 </div>
                 <div ref="midlogo"
                     :style="{ maskImage: `radial-gradient(circle at ${coordinates.x}px ${coordinates.y}px, black 40%, transparent 100%)` }"
-                    class="midtext transition-opacity duration-500 ease-in-out mt-8">
+                    class="midtext transition-all duration-500 ease-in-out mt-8">
                     <div class="flex flex-col items-center mx-auto">
-                        <img src="/nettdoru.webp" ref="doNotTheImage"
+                        <img src="/nettdoru.webp"
                             class="w-60 md:w-96 p-5 transition duration-500 ease-in-out transform hover:scale-110" />
                     </div>
                     <p class="p-2">
-                        {{ touches >= 999 ? new Array(Math.ceil(Math.random() *
-                            5)).fill(LALADESC).join(
-                                "",
-                            ) : `I'm Pranev, aka NeTT, a college student who makes random JavaScript programs in my free time. I
+                        I'm Pranev, aka NeTT, a college student who makes random JavaScript programs in my free time. I
                         usually
-                        make websites and web apps using Vue and Nuxt.`}}
+                        make websites and web apps using Vue and Nuxt.
                     </p>
                 </div>
             </div>
-            <audio ref="eerieMusic" loop class="invisible">
-                <source src="/music/wasitthen.wav" type="audio/wav" />
-            </audio>
             <footer class="stroke-[#ffcef1] relative z-40 flex flex-row items-center justify-center stroke-1 gap-4 mx-auto">
                 <a href="https://github.com/retraigo" target="_blank" class="font-semibold flex flex-row items-center">
                     <span class="sr-only">NeTT's GitHub</span>
@@ -82,6 +76,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    widows: 100%;
     text-align: center;
     z-index: 30;
 }
@@ -172,45 +167,16 @@
 </style>
 <script setup lang="ts">
 const coordinates = ref<{ x: number; y: number }>({ x: 84, y: 155 });
-
-const LALA = `Ļ̸̛̭̜̯̫̬̱͈̲̬̱̥͚̰͉̺̖̥̯̤̮̺͈͖͈̲͕͔̱̟̩̪͈͓̙̦͈͎̙͓͈̩̆͌͒̑̌̅̇̍͑̃͌̑͂͑̀ͅä̴̧̨̬̤̱̘͍̟͈̼̪̥͇͎͉̮̙̬͈̳̦̩̥̹̼̼͇̝̮̞̳̬̪̽̈́͒̈́̄̆̑̋͑̑͐̇͂̿͆́̈͛̂͘͘͘̕̚̕̚͝͠ ̶̧̡͎͎͈̤̦̘͖̺̙̺̺̤̤̮͕̪͚̫͌͆͊͌̋̀́̽͛̏̾̓̿̂͗̈́̐̃̋̐̔͗̐̽̔̑̕Ļ̴̢̧̧̤͚̠̻͖̪͇̦̲̠̺̣̹̟͔̯̱̹̖͍̗̼͚̫̙̘̱̲͇̞̥̗̬̳͍͍̲̠̤̲͇̮̉̃̅́̊̀̉̃̃̃͑̏͗̄̄̽̿͊̇̈́̈́̎̈̓̔́̂͐̔̎̾̽̾̚̕̕͘͜͝͠͝͝ͅạ̴̢̡̢̢̼̹̝͓̰̥̖̞͚̱̘̰̯̖̲̲͚͓͖̘̹̹̱̘̩̦̬͕̙̯͙̟͎̱̲͈͕̼̗̙̥͕̬̗̮͔͓̦̪̐̊̐̈́́̉̇̎͂̈̔̈̓̀̎̿̋̉͊̎͗̀͌͂̂̀͊̏̍̏̕͘̕̕͝͝͝͝ͅļ̷͚̰͖͔͇͖̹͖̲̦̝̭̦̰̱͗̓̿̐̂̆̈́͑̈̓̓͑̏̒͐̽̄̎̓̅̇̇̐͊̊̿͂̅́̑́̑͛͊̒͋̈̉̂̉̐̈́̉̎͛̉͒͘͘͘̕͝͠͝a̶̧̧̨̧̧̛̛̰̮̯̳̩̞͕̳͓̹̠̗̙̫̣͚̦̻͙̤̙͈̺̞̻̦̱̪͔̘̭͇͓͍̰̲̗̻̭̗̓̈́̏̄̉̈͒̀̓̽̈́̏̃́̃̓͊͒̑͒̿͆̎̅͛̈͆̓̂͊̅̃̔̑̍̈́͛͑̒̅̀̀͋̚͘͘͘͜͜͠͝͠͝ͅͅ`;
-
-const LALADESC = `776879776f756c64796f75`;
-
-// @ts-ignore pls
-const doNotTheImage = ref<HTMLImageElement>(null)
-// @ts-ignore pls
-const eerieMusic = ref<HTMLAudioElement>(null)
-const touches = ref(0)
 function onLeave() {
     movingthing.value.style.opacity = "0";
     isTouched.value = false;
     setTimeout(() => {
         coordinates.value.x = 1000
         coordinates.value.y = -999
-        if (Math.random() > 0.6) {
-            if (touches.value === 8) {
-                touches.value = 999;
-                //@ts-ignore pls
-                midtext.value.style["-webkit-mask-image"] = ""
-                //@ts-ignore pls
-                midtext.value.style["mask-image"] = ""
-            }
-            else if (touches.value < 8) touches.value += 1
-            doNotTheImage.value.src = `/variants/${Math.min(touches.value, 999)}.webp`
-
-        }
     }, 500)
 }
 
-function playAudio() {
-    if(touches.value >= 999) {
-        eerieMusic.value.play()
-    }
-}
-
 function move(e: { pageX: number; pageY: number }) {
-    if (touches.value >= 999) return
     if (!isTouched.value) {
         movingthing.value.style.opacity = "0"; return;
     }
