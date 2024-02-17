@@ -22,7 +22,7 @@
                     :class="`w-48 ml-[1rem] transition duration-500 ease-in-out ${subMenuOpen.some(x => x) ? `` : `w-48`} ${navOpen ? `translate-y-8` : `-translate-y-[100rem]`}`">
                     <button
                         :class="`flex items-center gap-2 p-[0.5rem] h-[3rem] transition-all duration-500 ease-in-out ${subMenuOpen.some(x => x) ? `justify-center max-w-[3rem] rounded-full` : `max-w-sm rounded-none`} w-full overflow-hidden border ${subMenuOpen[i] ? `bg-chaos-primary stroke-chaos-foreground border-chaos-foreground text-chaos-foreground` : `bg-chaos-foreground hover:bg-chaos-primary hover:border-chaos-foreground hover:text-chaos-foreground text-black stroke-black hover:stroke-chaos-foreground`}`"
-                        @click="_ => swapSub(i)">
+                        @click="_ => swapSub(i)" @mouseenter="playHover">
                         <svg :class="`block h-[1.5rem] w-[1.5rem] stroke-2`" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" :d="`${item.icon}`" />
@@ -36,7 +36,7 @@
                             :class="`relative w-48 transition duration-500 ease-in-out ${subMenuOpen[i] ? `translate-y-0` : `-translate-y-[100rem]`}`"
                             :style="{ transitionDelay: `${j * 0.1}s` }">
                             <a class="flex items-center gap-2 p-[0.5rem] h-[3rem] w-full text-black border transition-all duration-500 ease-in-out bg-chaos-foreground hover:bg-chaos-primary hover:border-chaos-foreground hover:text-chaos-foreground stroke-black hover:stroke-chaos-foreground"
-                                :href="subItem.href" target="_blank" @click="playSelect">
+                                :href="subItem.href" target="_blank" @click="playSelect"  @mouseenter="playHover">
                                 <svg :class="`block h-8 w-8 stroke-1`" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" :d="`${subItem.icon}`" />
@@ -87,7 +87,15 @@ function swapNav() {
 }
 
 function playSelect() {
+    // @ts-ignore pls
+    menuSelect.value.currentTime = 0
     menuSelect.value?.play()
+}
+
+function playHover() {
+    // @ts-ignore pls
+    menuHover.value.currentTime = 0
+    menuHover.value?.play()
 }
 
 function swapSub(i: number) {
