@@ -103,8 +103,8 @@ function swapSub(i: number) {
     closeAllSub()
     subMenuOpen[i] = temp
     // @ts-ignore pls
-    menuHover.value.currentTime = 0
-    menuHover.value?.play()
+    menuSelect.value.currentTime = 0
+    menuSelect.value?.play()
 }
 
 function closeAllSub() {
