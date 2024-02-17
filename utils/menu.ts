@@ -13,6 +13,11 @@ export const MainMenu = [
         href: "https://github.com/retraigo/appraisal",
         icon: AllIcons.github,
       },
+      {
+        name: "Deno ML",
+        href: "https://github.com/retraigo/deno-ml",
+        icon: AllIcons.github,
+      },
     ],
   },
   {
@@ -49,6 +54,11 @@ export const MainMenu = [
         name: "Moe Counter",
         href: "https://github.com/retraigo/moe-counter",
         icon: AllIcons.github,
+      },
+      {
+        name: "KV Chopper",
+        href: "https://kv-chopper.deno.dev",
+        icon: AllIcons.globe,
       },
     ],
   },
