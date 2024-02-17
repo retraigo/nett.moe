@@ -18,7 +18,7 @@
             </button>
             <div
                 :class="`flex flex-col items-stretch gap-[0.5rem] transition duration-500 ease-in-out ${navOpen ? `visible` : `invisible`}`">
-                <div v-for="item, i in menu" :style="{ zIndex: 50 - i, transitionDelay: `${i * 0.1}s` }"
+                <div v-for="item, i in menu" :style="{ zIndex: subMenuOpen[i] ? 50 : 30, transitionDelay: `${i * 0.1}s` }"
                     :class="`w-48 ml-[1rem] transition duration-500 ease-in-out ${subMenuOpen.some(x => x) ? `` : `w-48`} ${navOpen ? `translate-y-8` : `-translate-y-[100rem]`}`">
                     <button
                         :class="`flex items-center gap-2 p-[0.5rem] h-[3rem] transition-all duration-500 ease-in-out ${subMenuOpen.some(x => x) ? `justify-center max-w-[3rem] rounded-full` : `max-w-sm rounded-none`} w-full overflow-hidden border ${subMenuOpen[i] ? `bg-chaos-primary stroke-chaos-foreground border-chaos-foreground text-chaos-foreground` : `bg-chaos-foreground hover:bg-chaos-primary hover:border-chaos-foreground hover:text-chaos-foreground text-black stroke-black hover:stroke-chaos-foreground`}`"
