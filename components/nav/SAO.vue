@@ -22,7 +22,7 @@
                     :class="`w-48 ml-[1rem] transition duration-500 ease-in-out ${subMenuOpen.some(x => x) ? `` : `w-48`} ${navOpen ? `translate-y-8` : `-translate-y-[100rem]`}`">
                     <button
                         :class="`flex items-center gap-2 p-[0.5rem] h-[3rem] transition-all duration-500 ease-in-out ${subMenuOpen.some(x => x) ? `justify-center max-w-[3rem] rounded-full` : `max-w-sm rounded-none`} w-full overflow-hidden border ${subMenuOpen[i] ? `bg-chaos-primary stroke-chaos-foreground border-chaos-foreground text-chaos-foreground` : `bg-chaos-foreground hover:bg-chaos-primary hover:border-chaos-foreground hover:text-chaos-foreground text-black stroke-black hover:stroke-chaos-foreground`}`"
-                        @click="_ => swapSub(i)" @mouseenter="playHover">
+                        @click="_ => swapSub(i)">
                         <svg :class="`block h-[1.5rem] w-[1.5rem] stroke-2`" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" :d="`${item.icon}`" />
