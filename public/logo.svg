@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 32 32">
+    <defs>
+        <clipPath id="clipShadow">
+            <path d="M -4 26 A 24 52 3 1 1 36 26 A 24 22 3 0 0 -4 26 Z" fill="rgba(0,0,0,0.2)"/>
+        </clipPath>
+        <clipPath id="clipEye">
+            <circle cx="16" cy="0" r="24"/>
+        </clipPath>
+        <clipPath id="clipInnerEye">
+            <circle cx="16" cy="14" r="8"/>
+        </clipPath>
+    </defs>
+    <!--LASHES-->
+    <path d="M 8 28 L 10 20 M 16 30 L 16 20 M 24 28 L 22 20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#2e0324" fill="transparent"/>
+    <!--SCLERA-->
+    <circle cx="16" cy="14" r="12" fill="#ffffff"/>
+    <!--IRIS-->
+    <circle cx="16" cy="14" r="8" fill="#262626"/>
+    <ellipse cx="16" cy="22" rx="12" ry="10" fill="#323232" clip-path="url(#clipInnerEye)"/>
+    <ellipse cx="16" cy="22" rx="8" ry="6" fill="#414141" clip-path="url(#clipInnerEye)"/>
+    <circle cx="16" cy="14" r="8" stroke-width="1" stroke="#323232" fill="transparent"/>
+    <!--SHADOW-->
+    <circle clip-path="url(#clipShadow)" cx="16" cy="14" r="12" fill="rgba(0,0,0,0.2)"/>
+    <!--OUTER STUFF-->
+    <circle cx="16" cy="14" r="12" stroke="#2e0324" fill="transparent"/>
+</svg>
