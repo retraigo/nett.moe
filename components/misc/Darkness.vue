@@ -139,12 +139,12 @@
 <script setup lang="ts">
 const coordinates = ref<{ x: number; y: number }>({ x: 84, y: 155 });
 function onLeave() {
-    movingthing.value.style.opacity = "0";
-    isTouched.value = false;
-    setTimeout(() => {
-        coordinates.value.x = 1000
-        coordinates.value.y = -999
-    }, 500)
+//    movingthing.value.style.opacity = "0";
+//    isTouched.value = false;
+//    setTimeout(() => {
+//        coordinates.value.x = 1000
+//        coordinates.value.y = -999
+//    }, 500)
 }
 
 function move(e: { pageX: number; pageY: number }) {
