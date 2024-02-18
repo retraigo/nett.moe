@@ -57,18 +57,18 @@ export const MainMenu = [
     items: [
       {
         name: "Moe Counter",
-        href: "https://github.com/retraigo/moe-counter",
-        icon: AllIcons.github,
+        href: "https://count.nett.moe",
+        icon: AllIcons.menu,
       },
       {
         name: "La Lala",
         href: "https://lala.nett.moe",
-        icon: AllIcons.globe,
+        icon: AllIcons.reports,
       },
       {
         name: "KV Chopper",
         href: "https://kv-chopper.deno.dev",
-        icon: AllIcons.globe,
+        icon: AllIcons.smiley,
       },
       {
         name: "This Website",
@@ -101,6 +101,11 @@ export const MainMenu = [
         href: "https://facebook.com/retraigo",
         icon: AllIcons.facebook,
       },
+      {
+        name: "YouTube",
+        href: "https://www.youtube.com/channel/UCdtiZ5YjO0eOuR6B8UQ3XBw",
+        icon: AllIcons.youtube
+      }
     ],
   },
 ];
