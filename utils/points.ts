@@ -52,7 +52,7 @@ export const Points: { name: string; points: ("r" | [number, number])[] }[] = [
       [18, 17],
       [57, 40],
       [81, 66],
-      [81, 84],
+      [57, 40],
       [18, 17], // main
       [57, 40], // main
       [81, 66], // main
