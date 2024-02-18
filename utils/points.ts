@@ -77,8 +77,6 @@ export const Points: { name: string; points: ("r" | [number, number])[] }[] = [
     name: "Taurus",
     points: [
       [50, 31],
-      [39, 11],
-      [50, 31],
       [47, 45],
       [57, 48],
       [53, 60],
@@ -100,6 +98,7 @@ export const Points: { name: string; points: ("r" | [number, number])[] }[] = [
       [53, 60], // main
       [39, 61], // main
       [17, 30], // main
+      [39, 61],
     ],
   },
   {
