@@ -25,9 +25,7 @@
                             class="w-60 md:w-96 p-5 transition duration-500 ease-in-out transform hover:scale-110" />
                     </div>
                     <p class="p-2">
-                        I'm Pranev, aka NeTT, a college student who makes random JavaScript programs in my free time. I
-                        usually
-                        make websites and web apps using Vue and Nuxt.
+                        I make websites.
                     </p>
                 </div>
             </div>

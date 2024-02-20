@@ -80,10 +80,9 @@ const subMenuOpen = reactive(new Array(menu.length).fill(false))
 
 function swapNav() {
     closeAllSub()
-    navOpen.value = !navOpen.value
-    // @ts-ignore pls
-    menuOpen.value.currentTime = 0
-    menuOpen.value?.play()
+    navOpen.value = !navOpen.value;
+    (menuOpen.value as HTMLAudioElement).currentTime = 0;
+    (menuOpen.value as HTMLAudioElement).play()
 }
 
 function playSelect() {
