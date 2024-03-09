@@ -15,7 +15,7 @@
             <div class="relative z-20">
                 <div ref="midtext"
                     class="midtext text-5xl lg:text-6xl lg:mt-16 xl:text-8xl transition-all duration-500 ease-in-out mt-12">
-                    <span class="font-cinzel tracking-wider">Pranev (NeTT)</span>
+
                 </div>
                 <div ref="midlogo"
                     :style="{ maskImage: `radial-gradient(circle at ${coordinates.x}px ${coordinates.y}px, black 20%, transparent 100%)` }"
@@ -25,7 +25,7 @@
                             class="w-60 md:w-96 p-5 transition duration-500 ease-in-out transform hover:scale-110" />
                     </div>
                     <p class="p-2">
-                        I make websites.
+                        Incomplete Salty Weeb Dev
                     </p>
                 </div>
             </div>
@@ -139,10 +139,10 @@ const coordinates = ref<{ x: number; y: number }>({ x: 84, y: 155 });
 function onLeave() {
     movingthing.value.style.opacity = "0";
     isTouched.value = false;
-//    setTimeout(() => {
-//        coordinates.value.x = 1000
-//        coordinates.value.y = -999
-//    }, 500)
+    //    setTimeout(() => {
+    //        coordinates.value.x = 1000
+    //        coordinates.value.y = -999
+    //    }, 500)
 }
 
 function move(e: { pageX: number; pageY: number }) {
