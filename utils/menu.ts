@@ -19,8 +19,8 @@ export const MainMenu = [
         icon: AllIcons.github,
       },
       {
-        name: "<Dummy>",
-        href: "https://github.com/retraigo/deno-ml",
+        name: "More",
+        href: "https://github.com/retraigo",
         icon: AllIcons.book,
       },
     ],
