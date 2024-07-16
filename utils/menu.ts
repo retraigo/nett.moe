@@ -82,7 +82,7 @@ export const MainMenu = [
     icon: AllIcons.users,
     items: [
       {
-        name: "Twitter",
+        name: "X (Twitter)",
         href: "https://x.com/retraigo",
         icon: AllIcons.twitter,
       },
@@ -104,8 +104,13 @@ export const MainMenu = [
       {
         name: "YouTube",
         href: "https://www.youtube.com/channel/UCdtiZ5YjO0eOuR6B8UQ3XBw",
-        icon: AllIcons.youtube
-      }
+        icon: AllIcons.youtube,
+      },
+      {
+        name: "Cara",
+        href: "https://cara.app/nett",
+        icon: AllIcons.globe,
+      },
     ],
   },
 ];
