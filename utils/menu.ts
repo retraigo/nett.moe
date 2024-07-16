@@ -111,6 +111,11 @@ export const MainMenu = [
         href: "https://cara.app/nett",
         icon: AllIcons.globe,
       },
+      {
+        name: "Patreon",
+        href: "https://patreon.com/nett",
+        icon: AllIcons.globe,
+      },
     ],
   },
 ];
