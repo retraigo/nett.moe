@@ -1,5 +1,5 @@
 export const Points: { name: string; points: ("r" | [number, number])[] }[] = [
-  {
+  /*{
     name: "random",
     points: [
       "r",
@@ -21,7 +21,7 @@ export const Points: { name: string; points: ("r" | [number, number])[] }[] = [
       "r",
       "r",
     ],
-  },
+  },*/
   {
     name: "Aries",
     points: [
@@ -440,6 +440,62 @@ export const Points: { name: string; points: ("r" | [number, number])[] }[] = [
       [50, 67], // main
       [54, 46], // main
       [46, 37], // main
+    ],
+  },
+  {
+    name: "Andromeda",
+    points: [
+      [19, 16], // main
+      [34, 17], // main
+      [50, 31], // main
+      [50, 42], // main
+      [43, 53], // main
+      [22, 39], // main
+      [6, 37], // main
+      [22, 39], // main
+      [43, 53], // main
+      [66, 64], // main
+      [67, 79], // main
+      [63, 84], // main
+      [67, 79], // main
+      [66, 64], // main
+      [92, 65], // main
+      [66, 64], // main
+      [68, 54], // main
+      [75, 37], // main
+      [90, 22], // main
+      [95, 14], // main
+      [90, 22], // main
+      [82, 19], // main
+      [90, 22],
+    ],
+  },
+  {
+    name: "Canis Major",
+    points: [
+      [15, 81], // main
+      [23, 70], // main
+      [29, 68], // main
+      [37, 74], // main
+      [39, 79], // main
+      [46, 94], // main
+      [39, 79], // main
+      [74, 86], // main
+      [39, 79], // main
+      [37, 74], // main
+      [43, 58], // main
+      [61, 37], // main
+      [62, 54], // main
+      [61, 37], // main
+      [77, 33], // main
+      [61, 37], // main
+      [53, 26], // main
+      [42, 27], // main
+      [34, 21], // main
+      [44, 6], // main
+      [42, 27], // main
+      [53, 26], // main
+      [34, 57], // main
     ],
   },
 ];
