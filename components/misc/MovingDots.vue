@@ -2,12 +2,13 @@
 import { Points } from '~/utils/points';
 
 const colors = ["#ffe6f9", "#ffb3ed", "#ff80e1", "#ff4dd5", "#ff1ac9"];
-const arr = new Array(23).fill(null);
+const _firstPoint = Points[Math.floor(Math.random() * Points.length)]
 const _items: [number, number, string][] = [];
-for (const _n in arr) {
+for (let n = 0; n < 23; n += 1) {
+    const point = _firstPoint.points[n]
     _items.push([
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
+        point === "r" ? Math.floor(Math.random() * 100) : !point ? Math.floor(Math.random() * 100) : point[0],
+        point === "r" ? Math.floor(Math.random() * 100) : !point ? Math.floor(Math.random() * 100) : point[1],
         colors[Math.floor(Math.random() * colors.length)]
     ]);
 }
@@ -27,6 +28,7 @@ const position = computed(() => {
 function moveItems() {
     const __items: [number, number, string][] = [];
     const newPoint = Points[Math.floor(Math.random() * Points.length)]
+    //const newPoint = Points[Points.length - 1]
     for (let n = 0; n < items.value.length; n += 1) {
         const point = newPoint.points[n]
         __items.push([
@@ -66,7 +68,7 @@ onMounted(() => {
             </marker>
             <ClientOnly fallback-tag="span" fallback="Xue">
                 <path :d="`${`M ${(position[0] * (poss[0])) / 100} ${(position[1] * (poss[1])) / 100}`} L ${(position[0] * (items[i + 1]?.[0] || poss[0])) / 100} ${position[1] * (items[i + 1]?.[1]
-                    || poss[1]) / 100}`" stroke-width="0.5px" v-if="i !== items.length - 1"
+                    || poss[1]) / 100}`" stroke-width="1px" v-if="i !== items.length - 1"
                     :class="`opacity-50 transition-all duration-[5000ms] ease-in transform item${i || 99}`"
                     :stroke="poss[2]" :marker-end="`url(#endLine${i})`"
                     :marker-start="!i ? `url(#startLine${i})` : undefined" />
