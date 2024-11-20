@@ -54,21 +54,21 @@ onMounted(() => {
 
 
 <template>
-    <svg width="100%" height="100%" class="fixed top-0 left-0 min-h-screen pointer-events-none">
+    <svg class="fixed inset-0 mx-auto min-h-screen pointer-events-none" viewBox="0 0 100 100" style="aspect-ratio: 1/1; max-width:90vw; max-height:90vh">
         <g v-for="poss, i in items" :key="`bgItem-${i}`">
             <marker :id="`endLine${i}`" class="relative" viewBox="0 0 22 22" refX="10" refY="10"
                 markerUnits="userSpaceOnUse" markerWidth="5" markerHeight="5">
                 <circle class="transition-all duration-[5000ms] ease-in transform absolute -z-30 rounded-full" cx="10"
-                    :stroke="poss[2]" :fill="poss[2]" cy="10" r="10px" />
+                    :stroke="poss[2]" :fill="poss[2]" cy="10" r="2" />
             </marker>
             <marker :id="`startLine${i}`" class="relative" viewBox="0 0 22 22" refX="10" refY="10"
                 markerUnits="userSpaceOnUse" markerWidth="5" markerHeight="5">
                 <circle class="transition-all duration-[5000ms] ease-in transform absolute -z-30 rounded-full" cx="10"
-                    :stroke="poss[2]" :fill="poss[2]" cy="10" r="10px" />
+                    :stroke="poss[2]" :fill="poss[2]" cy="10" r="2" />
             </marker>
             <ClientOnly fallback-tag="span" fallback="Xue">
-                <path :d="`${`M ${(position[0] * (poss[0])) / 100} ${(position[1] * (poss[1])) / 100}`} L ${(position[0] * (items[i + 1]?.[0] || poss[0])) / 100} ${position[1] * (items[i + 1]?.[1]
-                    || poss[1]) / 100}`" stroke-width="1px" v-if="i !== items.length - 1"
+                <path :d="`${`M ${poss[0]} ${poss[1]}`} L ${items[i + 1]?.[0] || poss[0]} ${items[i + 1]?.[1]
+                    || poss[1]}`" stroke-width="0.5" v-if="i !== items.length - 1"
                     :class="`opacity-50 transition-all duration-[5000ms] ease-in transform item${i || 99}`"
                     :stroke="poss[2]" :marker-end="`url(#endLine${i})`"
                     :marker-start="!i ? `url(#startLine${i})` : undefined" />
